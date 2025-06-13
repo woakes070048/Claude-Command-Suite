@@ -8,10 +8,12 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Beginner-friendly README.md with simplified structure
-- Comprehensive INSTALLATION.md guide with detailed setup methods
-- CUSTOMIZATION.md guide for modifying and creating commands
-- DEVELOPMENT.md guide with testing and contribution guidelines
+- Comprehensive docs/INSTALLATION.md guide with detailed setup methods
+- docs/CUSTOMIZATION.md guide for modifying and creating commands
+- docs/DEVELOPMENT.md guide with testing and contribution guidelines
+- docs/ROADMAP.md with development roadmap and new command ideas
 - Contributing section encouraging community participation
+- Organized documentation into docs/ directory for cleaner project structure
 
 ### Changed
 - Restructured documentation for better user experience

@@ -70,9 +70,9 @@ Commands are available as `/project:command-name` in Claude Code. Each command f
 
 ## Need More Details?
 
-- **[Installation Guide](INSTALLATION.md)** - Detailed installation methods, troubleshooting, and configuration
-- **[Customization Guide](CUSTOMIZATION.md)** - How to modify commands and create new ones
-- **[Development Guide](DEVELOPMENT.md)** - Contributing, testing, and best practices
+- **[Installation Guide](docs/INSTALLATION.md)** - Detailed installation methods, troubleshooting, and configuration
+- **[Customization Guide](docs/CUSTOMIZATION.md)** - How to modify commands and create new ones
+- **[Development Guide](docs/DEVELOPMENT.md)** - Contributing, testing, and best practices
 
 ## Contributing
 
@@ -93,7 +93,7 @@ This repository exists to collect and share useful slash commands for Claude Cod
 3. Test your changes thoroughly
 4. Submit a pull request with a clear description
 
-See **[Development Guide](DEVELOPMENT.md)** for detailed contribution guidelines, testing practices, and quality standards.
+See **[Development Guide](docs/DEVELOPMENT.md)** for detailed contribution guidelines, testing practices, and quality standards.
 
 ## Requirements
 
