@@ -8,7 +8,7 @@ Use the provided installation script for easy setup:
 
 ```bash
 # Clone or download this repository
-git clone <repository-url>
+git clone https://github.com/qdhenry/Claude-Command-Suite.git
 cd claude-rules
 
 # Make the installer executable and run it
