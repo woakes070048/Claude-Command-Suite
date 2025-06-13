@@ -7,7 +7,7 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 
 1. **Install the commands:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/qdhenry/Claude-Command-Suite.git
    cd claude-rules
    chmod +x install.sh
    ./install.sh
