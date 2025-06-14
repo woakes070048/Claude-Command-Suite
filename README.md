@@ -29,6 +29,8 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 - `/project:security-audit` - Security vulnerability assessment
 - `/project:performance-audit` - Find performance bottlenecks
 - `/project:dependency-audit` - Check dependency security and updates
+- `/project:explain-code` - Explain complex code sections and architecture
+- `/project:test-coverage` - Analyze and improve test coverage
 
 ### 🛠️ Development Commands
 - `/project:create-feature` - Complete feature development workflow
@@ -36,6 +38,8 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 - `/project:refactor-code` - Safe refactoring with testing
 - `/project:debug-error` - Systematic debugging approach
 - `/project:optimize-build` - Build system improvements
+- `/project:optimize-bundle-size` - Reduce application bundle size
+- `/project:write-tests` - Generate comprehensive test suites
 
 ### 🚀 Project Setup Commands
 - `/project:init-project [type] [framework]` - Initialize new project with industry best practices
@@ -43,16 +47,56 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 - `/project:add-package [name] [type]` - Add new package/module with proper structure
 - `/project:setup-development-environment` - Configure development environment and tools
 - `/project:migrate-to-typescript` - Convert JavaScript project to TypeScript
+- `/project:setup-linting` - Configure code linting and quality tools
+- `/project:setup-formatting` - Set up code formatting standards
+- `/project:ci-setup` - Configure continuous integration pipelines
 
 ### 🧪 Testing Commands
 - `/project:setup-comprehensive-testing` - Set up complete testing stack (unit, integration, e2e, visual)
 - `/project:generate-test-cases [file/function]` - Auto-generate test cases for existing code
+- `/project:setup-visual-testing` - Configure visual regression testing for UI components
+- `/project:add-property-based-testing` - Set up property-based testing framework
+- `/project:setup-load-testing` - Configure performance and load testing infrastructure
+- `/project:add-mutation-testing` - Set up mutation testing to verify test quality
+- `/project:e2e-setup` - Configure end-to-end testing infrastructure
+
+### 📚 Documentation Commands
+- `/project:generate-api-documentation` - Auto-generate comprehensive API documentation
+- `/project:create-architecture-documentation` - Generate system architecture diagrams and docs
+- `/project:create-onboarding-guide` - Generate comprehensive getting-started guide
+- `/project:doc-api` - Create detailed API documentation
+- `/project:add-changelog` - Set up automated changelog generation
+- `/project:migration-guide` - Create migration guides for major changes
+- `/project:troubleshooting-guide` - Generate troubleshooting documentation
 
 ### 🔒 Security Commands  
 - `/project:security-hardening` - Apply comprehensive security best practices
+- `/project:add-authentication-system` - Implement robust authentication and authorization
+- `/project:setup-rate-limiting` - Configure API rate limiting and protection
 
 ### 🐳 DevOps Commands
 - `/project:containerize-application` - Create optimal Docker configuration
+- `/project:setup-kubernetes-deployment` - Generate Kubernetes manifests for deployment
+- `/project:setup-monitoring-observability` - Add comprehensive monitoring, logging, and tracing
+- `/project:add-performance-monitoring` - Implement detailed performance monitoring
+- `/project:setup-cdn-optimization` - Configure CDN and asset optimization
+- `/project:hotfix-deploy` - Deploy critical fixes with validation
+- `/project:rollback-deploy` - Safely rollback deployments
+- `/project:prepare-release` - Prepare production releases with validation
+- `/project:clean-branches` - Clean up merged and stale branches
+
+### 🗄️ Database Commands
+- `/project:design-database-schema` - Design and validate database schemas
+- `/project:create-database-migrations` - Generate safe database migrations
+- `/project:optimize-database-performance` - Optimize database queries and performance
+
+### 🌐 API Commands
+- `/project:design-rest-api` - Design RESTful API endpoints
+- `/project:implement-graphql-api` - Implement GraphQL API layer
+- `/project:implement-caching-strategy` - Add intelligent caching systems
+
+### 🔄 Maintenance Commands
+- `/project:modernize-deps` - Update and modernize dependencies safely
 
 ## How It Works
 
