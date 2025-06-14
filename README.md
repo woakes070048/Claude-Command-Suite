@@ -156,6 +156,34 @@ This repository exists to collect and share useful slash commands for Claude Cod
 
 See **[Development Guide](docs/DEVELOPMENT.md)** for detailed contribution guidelines, testing practices, and quality standards.
 
+## Automated Changelog
+
+This project features automated changelog generation to track command additions and updates:
+
+### 🤖 **Automatic Updates**
+- **GitHub Actions Integration**: Automatically detects when new commands are added
+- **Smart Detection**: Tracks both new command files and modifications to existing ones
+- **Formatted Entries**: Generates properly formatted changelog entries with command descriptions
+- **PR Comments**: Provides summary comments on pull requests with changelog updates
+
+### 📝 **Manual Updates**
+For manual changelog updates, use the provided script:
+```bash
+./scripts/update-changelog.sh
+```
+
+This script will:
+- Scan all command files in `.claude/commands/`
+- Extract command names and descriptions
+- Update `CHANGELOG.md` with categorized command listings
+- Create a backup of the existing changelog
+
+### 📊 **Changelog Features**
+- **Command Categorization**: Automatically groups commands by type (Analysis, Development, Testing, etc.)
+- **Total Count Tracking**: Maintains accurate count of total available commands  
+- **Description Extraction**: Pulls descriptions directly from command files
+- **Backup Safety**: Creates backups before making changes
+
 ## Requirements
 
 - Claude Code version 1.0 or later
