@@ -35,6 +35,12 @@ print_error() {
 
 # Function to check if Claude Code is installed
 check_claude_code() {
+    # Skip Claude Code check in CI environments
+    if [ "${CI_TESTING:-}" = "true" ] || [ "${CI:-}" = "true" ]; then
+        print_warning "Skipping Claude Code check in CI environment"
+        return 0
+    fi
+    
     if ! command -v claude &> /dev/null; then
         print_error "Claude Code is not installed or not in PATH"
         echo "Please install Claude Code first: https://claude.ai/code"

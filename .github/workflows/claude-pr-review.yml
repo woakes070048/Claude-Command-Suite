@@ -73,12 +73,24 @@ jobs:
           echo "🧪 Testing installation script..."
           chmod +x install.sh
           
-          # Test help functionality
+          # Test help functionality (this doesn't require Claude Code)
+          echo "Testing --help flag..."
           ./install.sh --help
           
-          # Test dry run functionality (if available)
-          if ./install.sh --help | grep -q "dry-run"; then
-            ./install.sh --dry-run --project
+          # Test listing commands in CI environment
+          echo "Testing --list flag in CI..."
+          export CI_TESTING=true
+          ./install.sh --list
+          
+          # Verify the script can find and process command files
+          echo "Verifying script can access command files..."
+          if [ -d ".claude/commands" ]; then
+            echo "✅ Commands directory exists"
+            command_count=$(find .claude/commands -name "*.md" | wc -l)
+            echo "✅ Found $command_count command files"
+          else
+            echo "❌ Commands directory not found"
+            exit 1
           fi
           
           echo "✅ Installation script validation complete"
