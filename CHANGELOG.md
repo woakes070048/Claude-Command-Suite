@@ -51,4 +51,4 @@ Commands for project configuration and tooling setup.
 
 ---
 
-For detailed information about each release, see the [GitHub Releases](https://github.com/your-org/claude-rules/releases) page.
+For detailed information about each release, see the [GitHub Releases](https://github.com/qdhenry/Claude-Command-Suite/releases) page.

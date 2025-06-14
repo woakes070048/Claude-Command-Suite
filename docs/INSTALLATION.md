@@ -9,7 +9,7 @@ Use the provided installation script for easy setup:
 ```bash
 # Clone or download this repository
 git clone https://github.com/qdhenry/Claude-Command-Suite.git
-cd claude-rules
+cd Claude-Command-Suite
 
 # Make the installer executable and run it
 chmod +x install.sh

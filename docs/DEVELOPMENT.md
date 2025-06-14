@@ -10,7 +10,7 @@ Guide for contributing to claude-rules, testing commands, and following best pra
    ```bash
    git fork https://github.com/qdhenry/Claude-Command-Suite.git
    git clone <your-fork-url>
-   cd claude-rules
+   cd Claude-Command-Suite
    ```
 
 2. **Set Up Development Environment:**
