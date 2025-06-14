@@ -47,12 +47,24 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 ### 🧪 Testing Commands
 - `/project:setup-comprehensive-testing` - Set up complete testing stack (unit, integration, e2e, visual)
 - `/project:generate-test-cases [file/function]` - Auto-generate test cases for existing code
+- `/project:setup-visual-testing` - Configure visual regression testing for UI components
+- `/project:add-property-based-testing` - Set up property-based testing framework
+- `/project:setup-load-testing` - Configure performance and load testing infrastructure
+- `/project:add-mutation-testing` - Set up mutation testing to verify test quality
+
+### 📚 Documentation Commands
+- `/project:generate-api-documentation` - Auto-generate comprehensive API documentation
+- `/project:create-architecture-documentation` - Generate system architecture diagrams and docs
+- `/project:create-onboarding-guide` - Generate comprehensive getting-started guide
 
 ### 🔒 Security Commands  
 - `/project:security-hardening` - Apply comprehensive security best practices
+- `/project:add-authentication-system` - Implement robust authentication and authorization
 
 ### 🐳 DevOps Commands
 - `/project:containerize-application` - Create optimal Docker configuration
+- `/project:setup-kubernetes-deployment` - Generate Kubernetes manifests for deployment
+- `/project:setup-monitoring-observability` - Add comprehensive monitoring, logging, and tracing
 
 ## How It Works
 
