@@ -37,6 +37,23 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 - `/project:debug-error` - Systematic debugging approach
 - `/project:optimize-build` - Build system improvements
 
+### 🚀 Project Setup Commands
+- `/project:init-project [type] [framework]` - Initialize new project with industry best practices
+- `/project:setup-monorepo [tool]` - Configure monorepo structure with workspace management
+- `/project:add-package [name] [type]` - Add new package/module with proper structure
+- `/project:setup-development-environment` - Configure development environment and tools
+- `/project:migrate-to-typescript` - Convert JavaScript project to TypeScript
+
+### 🧪 Testing Commands
+- `/project:setup-comprehensive-testing` - Set up complete testing stack (unit, integration, e2e, visual)
+- `/project:generate-test-cases [file/function]` - Auto-generate test cases for existing code
+
+### 🔒 Security Commands  
+- `/project:security-hardening` - Apply comprehensive security best practices
+
+### 🐳 DevOps Commands
+- `/project:containerize-application` - Create optimal Docker configuration
+
 ## How It Works
 
 Commands are available as `/project:command-name` in Claude Code. Each command follows a structured workflow that Claude executes automatically, ensuring consistent and thorough results across different projects.
