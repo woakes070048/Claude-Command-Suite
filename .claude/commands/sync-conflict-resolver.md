@@ -1,7 +1,55 @@
 # Sync Conflict Resolver
 
-## Description
 Handle synchronization conflicts between GitHub and Linear with sophisticated resolution algorithms. This command detects, analyzes, and resolves conflicts using configurable strategies.
+
+## Instructions
+
+1. **Initialize Conflict Detection**
+   - Check GitHub CLI and Linear MCP availability
+   - Load existing sync metadata and mappings
+   - Parse command arguments from: **$ARGUMENTS**
+   - Set up conflict detection parameters
+
+2. **Parse Resolution Strategy**
+   - Extract action (detect, resolve, analyze, configure, report)
+   - Determine resolution strategy from options
+   - Configure auto-resolve preferences
+   - Set priority system if specified
+
+3. **Execute Selected Action**
+   Based on the action provided:
+
+   ### Detect Action
+   - Scan all synchronized items
+   - Compare GitHub and Linear versions
+   - Identify field-level conflicts
+   - Flag timing conflicts
+   - Generate conflict list
+
+   ### Resolve Action
+   - Apply selected strategy to conflicts
+   - Handle field merging if enabled
+   - Create backups before changes
+   - Log all resolutions
+   - Update sync metadata
+
+   ### Analyze Action
+   - Study conflict patterns
+   - Identify frequent conflict types
+   - Suggest process improvements
+   - Generate analytics report
+
+   ### Configure Action
+   - Set default resolution strategies
+   - Configure field priorities
+   - Define merge rules
+   - Save preferences
+
+   ### Report Action
+   - Generate detailed conflict report
+   - Show resolution history
+   - Provide conflict statistics
+   - Export findings
 
 ## Usage
 ```bash

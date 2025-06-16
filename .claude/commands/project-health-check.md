@@ -1,25 +1,16 @@
-# Project Health Check Analyzer
+# Project Health Check
 
-## Purpose
-Comprehensively assess project health by analyzing code quality, team velocity, technical debt, and delivery metrics to identify risks and opportunities for improvement.
+Assess project health with metrics on velocity, quality, and team performance to identify risks and opportunities for improvement.
 
-## Prerequisites
-- Git repository access
-- Linear MCP server (preferred for full metrics)
-- GitHub API access
-- Node.js environment for dependency analysis
+## Instructions
 
-## Command Flow
+1. **Health Check Initialization**
+   - Verify tool connections (Linear, GitHub)
+   - Define evaluation period (default: last 30 days)
+   - Set health check criteria and thresholds
+   - Identify key metrics to evaluate
 
-### 1. Health Check Initialization
-```
-1. Verify tool connections (Linear, GitHub)
-2. Define evaluation period (default: last 30 days)
-3. Set health check criteria and thresholds
-4. Identify key metrics to evaluate
-```
-
-### 2. Multi-Dimensional Analysis
+2. **Multi-Dimensional Analysis**
 
 #### Code Health Metrics
 ```bash
@@ -70,7 +61,7 @@ npx license-checker --json
 5. Documentation updates
 ```
 
-### 3. Health Report Generation
+3. **Health Report Generation**
 
 ```markdown
 # Project Health Report - [Project Name]
@@ -86,7 +77,7 @@ Overall Health Score: [Score]/100 [🟢 Healthy | 🟡 Needs Attention | 🔴 Cr
 
 ## Detailed Health Metrics
 
-### 1. Delivery Health (Score: [X]/100)
+1. **Delivery Health** (Score: [X]/100)
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
 | Sprint Velocity | [X] pts | [Y] pts | 🟢 |
@@ -94,7 +85,7 @@ Overall Health Score: [Score]/100 [🟢 Healthy | 🟡 Needs Attention | 🔴 Cr
 | Cycle Time | [X] days | [Y] days | 🟢 |
 | Defect Rate | [X]% | <5% | 🔴 |
 
-### 2. Code Quality (Score: [X]/100)
+2. **Code Quality** (Score: [X]/100)
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
 | Test Coverage | [X]% | 80% | 🟡 |
@@ -102,13 +93,13 @@ Overall Health Score: [Score]/100 [🟢 Healthy | 🟡 Needs Attention | 🔴 Cr
 | Complexity Score | [X] | <10 | 🟡 |
 | Security Issues | [X] | 0 | 🔴 |
 
-### 3. Technical Debt (Score: [X]/100)
+3. **Technical Debt** (Score: [X]/100)
 - 📊 Total Debt Items: [Count]
 - 📈 Debt Growth Rate: [+/-X% per sprint]
 - ⏱️ Estimated Debt Work: [X days]
 - 💰 Debt Impact: [Description]
 
-### 4. Team Health (Score: [X]/100)
+4. **Team Health** (Score: [X]/100)
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
 | PR Review Time | [X] hrs | <4 hrs | 🟢 |
@@ -116,7 +107,7 @@ Overall Health Score: [Score]/100 [🟢 Healthy | 🟡 Needs Attention | 🔴 Cr
 | Work Balance | [Score] | >0.8 | 🟢 |
 | Burnout Risk | [Level] | Low | 🟡 |
 
-### 5. Dependency Health (Score: [X]/100)
+5. **Dependency Health** (Score: [X]/100)
 - 🔄 Outdated Dependencies: [X]/[Total]
 - 🛡️ Security Vulnerabilities: [Critical: X, High: Y]
 - 📜 License Issues: [Count]
@@ -188,7 +179,7 @@ Week 4: ████████ 8 bugs 🚨 Action needed
 | Team Health | 75/100 | 70/100 | ↓ -5 |
 ```
 
-### 4. Interactive Deep Dives
+4. **Interactive Deep Dives**
 
 Offer focused analysis options:
 

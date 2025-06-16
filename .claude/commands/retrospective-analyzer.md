@@ -1,25 +1,16 @@
-# Sprint Retrospective Analyzer
+# Retrospective Analyzer
 
-## Purpose
-Facilitate data-driven sprint retrospectives by analyzing sprint metrics, team feedback, and identifying patterns to generate actionable insights and improvement recommendations.
+Facilitate sprint retrospectives with data-driven insights and action items by analyzing sprint metrics and identifying patterns for improvement.
 
-## Prerequisites
-- Git repository access
-- Linear MCP server connection (preferred)
-- Sprint data from last iteration
-- Team feedback collection mechanism
+## Instructions
 
-## Command Flow
+1. **Retrospective Setup**
+   - Identify sprint to analyze (default: most recent)
+   - Check Linear MCP connection for sprint data
+   - Define retrospective format preference
+   - Set analysis time range
 
-### 1. Retrospective Setup
-```
-1. Identify sprint to analyze (default: most recent)
-2. Check Linear MCP connection for sprint data
-3. Define retrospective format preference
-4. Set analysis time range
-```
-
-### 2. Sprint Data Collection
+2. **Sprint Data Collection**
 
 #### Quantitative Metrics
 ```
@@ -47,7 +38,7 @@ From Git/GitHub:
 5. Support ticket trends
 ```
 
-### 3. Automated Analysis
+3. **Automated Analysis**
 
 #### Sprint Performance Analysis
 ```markdown
@@ -105,7 +96,7 @@ From Git/GitHub:
    - Action: Review sprint commitment process
 ```
 
-### 4. Interactive Retrospective Facilitation
+4. **Interactive Retrospective Facilitation**
 
 #### Pre-Retrospective Report
 ```markdown
@@ -162,7 +153,7 @@ During the retrospective, I can help with:
    "From last retro, we completed 4/6 action items"
 ```
 
-### 5. Retrospective Output Formats
+5. **Retrospective Output Formats**
 
 #### Standard Retrospective Summary
 ```markdown
@@ -222,7 +213,7 @@ During the retrospective, I can help with:
 2. **Daily Standups** (Effective format found)
 ```
 
-### 6. Action Item Generation
+6. **Action Item Generation**
 
 #### Smart Action Items
 ```

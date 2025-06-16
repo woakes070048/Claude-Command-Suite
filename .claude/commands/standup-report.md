@@ -1,24 +1,16 @@
-# Daily Standup Report Generator
+# Standup Report
 
-## Purpose
-Generate comprehensive daily standup reports by analyzing git activity, Linear task updates, and PR status to help team members prepare for standup meetings.
+Generate daily standup reports from git commits and Linear task updates to help team members prepare for standup meetings.
 
-## Prerequisites
-- Git repository access
-- Linear MCP server connection (preferred)
-- GitHub API access
+## Instructions
 
-## Command Flow
+1. **Initial Setup**
+   - Check Linear MCP server connection
+   - Determine time range (default: last 24 hours)
+   - Identify team members (from git config or user input)
+   - Set report format preferences
 
-### 1. Initial Setup
-```
-1. Check Linear MCP server connection
-2. Determine time range (default: last 24 hours)
-3. Identify team members (from git config or user input)
-4. Set report format preferences
-```
-
-### 2. Data Collection
+2. **Data Collection**
 
 #### Git Activity Analysis
 ```bash
@@ -48,7 +40,7 @@ git diff --stat @{1.day.ago}
 4. Review CI/CD status
 ```
 
-### 3. Report Generation
+3. **Report Generation**
 
 Generate structured standup report:
 
@@ -85,7 +77,7 @@ Generate structured standup report:
 - Cycle Time: [Average]
 ```
 
-### 4. Multi-Format Output
+4. **Multi-Format Output**
 
 Provide output in various formats:
 
@@ -131,7 +123,7 @@ Best,
 [Name]
 ```
 
-### 5. Team Rollup View
+5. **Team Rollup View**
 
 For team leads, generate consolidated view:
 
@@ -189,7 +181,7 @@ Would you like to:
 
 ## Interactive Features
 
-### 1. Update Customization
+1. **Update Customization**
 ```
 "I've generated your standup report. Would you like to:
 1. Add additional context to any item?
@@ -198,7 +190,7 @@ Would you like to:
 4. Include work done outside of git?"
 ```
 
-### 2. Blocker Resolution
+2. **Blocker Resolution**
 ```
 "I notice you have blockers. Would you like help with:
 1. Drafting messages to unblock items?

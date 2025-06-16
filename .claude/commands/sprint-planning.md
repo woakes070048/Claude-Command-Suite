@@ -1,22 +1,16 @@
-# Sprint Planning Assistant
+# Sprint Planning
 
-## Purpose
-Analyze current project state and help plan upcoming sprints by integrating Linear tasks, GitHub data, and team capacity.
+Analyze current Linear tasks and help plan sprints by reviewing priorities, dependencies, and team capacity to create optimized sprint plans.
 
-## Prerequisites
-- Linear MCP server connection (preferred)
-- GitHub repository access
-- Team velocity data (if available)
+## Instructions
 
-## Command Flow
-
-### 1. Check Linear Integration
+1. **Check Linear Integration**
 First, verify if the Linear MCP server is connected:
 - If connected: Proceed with full integration
 - If not connected: Ask user to install Linear MCP server from https://github.com/modelcontextprotocol/servers
 - Fallback: Use GitHub issues and manual input
 
-### 2. Gather Sprint Context
+2. **Gather Sprint Context**
 Collect the following information:
 - Sprint duration (e.g., 2 weeks)
 - Sprint start date
@@ -24,7 +18,7 @@ Collect the following information:
 - Sprint goals/themes
 - Previous sprint velocity (if available)
 
-### 3. Analyze Current State
+3. **Analyze Current State**
 
 #### With Linear Connected:
 ```
@@ -43,7 +37,7 @@ Collect the following information:
 4. Ask user for additional context about tasks
 ```
 
-### 4. Sprint Planning Analysis
+4. **Sprint Planning Analysis**
 
 Generate a comprehensive sprint plan including:
 
@@ -92,7 +86,7 @@ Generate a comprehensive sprint plan including:
 - Cycle time
 ```
 
-### 5. Interactive Planning Session
+5. **Interactive Planning Session**
 
 Offer to help with:
 1. Task breakdown and estimation
