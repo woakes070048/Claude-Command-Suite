@@ -9,21 +9,37 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 
 ## Quick Start
 
-1. **Install the commands:**
-   ```bash
-   git clone https://github.com/qdhenry/Claude-Command-Suite.git
-   cd Claude-Command-Suite
-   chmod +x install.sh
-   ./install.sh
-   ```
+### Option 1: Direct Installation (Recommended)
+Simply add command files directly to your project's `.claude/commands/` folder:
 
-2. **Start using commands:**
-   ```bash
-   claude code
-   /project:code-review           # Review your entire codebase
-   /project:create-feature login  # Build a new feature
-   /project:security-audit        # Check for security issues
-   ```
+```bash
+# Create the commands directory in your project
+mkdir -p .claude/commands
+
+# Download specific commands you need
+curl -o .claude/commands/code-review.md https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.claude/commands/code-review.md
+
+# Or copy your own custom command files
+cp my-custom-command.md .claude/commands/
+```
+
+### Option 2: Install All Commands
+Use our installation script to set up all commands at once:
+
+```bash
+git clone https://github.com/qdhenry/Claude-Command-Suite.git
+cd Claude-Command-Suite
+chmod +x install.sh
+./install.sh
+```
+
+### Start Using Commands
+```bash
+claude code
+/project:code-review           # Review your entire codebase
+/project:create-feature login  # Build a new feature
+/project:security-audit        # Check for security issues
+```
 
 ## Available Commands
 
@@ -141,9 +157,37 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 
 ## How It Works
 
+Claude Code automatically recognizes any markdown file in your project's `.claude/commands/` directory as a slash command. No installation or setup required - just add the file and start using it!
+
+### Command Structure
+Each command file needs:
+- **Title**: `# Command Name`
+- **Description**: Brief overview of what the command does
+- **Instructions**: `## Instructions` section with detailed steps
+
+Example minimal command (`my-command.md`):
+```markdown
+# My Custom Command
+
+Performs a specific task in my project.
+
+## Instructions
+
+1. **First Step**
+   - Do this thing
+   - Check that thing
+
+2. **Second Step**
+   - Execute this action
+   - Verify the result
+```
+
+Use it immediately with: `/project:my-command`
+
+### Using Commands
 Commands are available as `/project:command-name` in Claude Code. Each command follows a structured workflow that Claude executes automatically, ensuring consistent and thorough results across different projects.
 
-**Example workflow:**
+**Example workflows:**
 - `/project:code-review` analyzes your entire codebase for quality, security, and performance
 - `/project:create-feature dashboard` plans, implements, and tests a new dashboard feature
 - `/project:fix-issue 123` systematically resolves GitHub issue #123 with testing
