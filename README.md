@@ -1,4 +1,8 @@
 # Claude Code Custom Slash Commands
+
+![Total Commands](https://img.shields.io/badge/Total%20Commands-79%20and%20growing!-brightgreen?style=for-the-badge)
+<!-- Dynamic badge (will work after PR merge): ![Total Commands](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.github/badges/command-count.json&style=for-the-badge) -->
+
 > **Inspired by Anthropic's Claude Code Best Practices**: These custom commands are designed following the principles and recommendations outlined in [Anthropic's Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) to maximize effectiveness and provide structured workflows for software development.
 
 Custom slash commands for Claude Code that provide structured workflows for common software development tasks. Get comprehensive analysis, feature development, and code maintenance with simple `/project:command-name` commands.
@@ -22,6 +26,8 @@ Custom slash commands for Claude Code that provide structured workflows for comm
    ```
 
 ## Available Commands
+
+🚀 **79 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
 
 ### 🔍 Analysis Commands
 - `/project:architecture-review` - Analyze system architecture and design patterns
