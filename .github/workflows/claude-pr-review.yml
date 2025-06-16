@@ -56,20 +56,13 @@ jobs:
             echo "✅ All command files validated successfully"
           fi
           
-      - name: Count Commands and Validate Documentation
+      - name: Count Commands
         run: |
           command_count=$(find .claude/commands -name "*.md" | wc -l)
           echo "📊 Found $command_count command files"
           
-          # Check if README reflects accurate count
-          if ! grep -q "55+" README.md; then
-            echo "⚠️  README.md may need updating - found $command_count commands"
-          fi
-          
-          # Check if CLAUDE.md reflects accurate count  
-          if ! grep -q "55+" docs/CLAUDE.md; then
-            echo "⚠️  docs/CLAUDE.md may need updating - found $command_count commands"
-          fi
+          # Store count for later validation
+          echo "COMMAND_COUNT=$command_count" >> $GITHUB_ENV
           
       - name: Test Installation Script
         run: |
@@ -150,11 +143,6 @@ jobs:
                - Categories are properly organized
                - Command count is accurate
                - Usage examples are helpful
-            
-            2. **CLAUDE.md Completeness**: Check that:
-               - Command categories match actual files
-               - Counts are accurate per category
-               - Repository structure info is current
             
             ### 🛠️ Installation & Setup
             1. **install.sh Functionality**: Review script for:

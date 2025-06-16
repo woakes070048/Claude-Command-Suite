@@ -8,7 +8,7 @@ This repository contains custom slash commands for Claude Code that provide spec
 
 ## Repository Structure
 
-- `.claude/commands/` - Contains 55+ specialized command files that define workflows for development tasks
+- `.claude/commands/` - Contains 81 specialized command files that define workflows for development tasks
 - `install.sh` - Installation script for setting up commands in projects (supports project-specific, global, and symlink installation)
 - `README.md` - Comprehensive documentation for installation and usage
 
@@ -90,6 +90,9 @@ The commands are organized into several categories:
 
 **Maintenance Commands (1):**
 - `modernize-deps` - Update and modernize dependencies safely
+
+**Project Management Commands (1):**
+- `project-to-linear` - Analyze project requirements and create comprehensive task lists in Linear
 
 ## Command Structure
 
