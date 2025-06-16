@@ -1,7 +1,68 @@
 # Cross-Reference Manager
 
-## Description
 Maintain and verify references between GitHub and Linear, ensuring data integrity across both platforms. This command provides comprehensive reference tracking, validation, and repair capabilities.
+
+## Instructions
+
+1. **Check Tool Availability**
+   - Verify GitHub CLI (`gh`) is installed and authenticated
+   - Check if Linear MCP server is connected
+   - If either tool is missing, provide setup instructions
+
+2. **Parse Command Arguments**
+   - Extract the action from command arguments: **$ARGUMENTS**
+   - Valid actions: audit, repair, map, validate, export
+   - Parse any additional options provided
+
+3. **Initialize Reference Database**
+   - Create or load existing reference mapping database
+   - Structure should track:
+     - GitHub issue ID ↔ Linear task ID
+     - GitHub PR ID ↔ Linear task ID
+     - Comment references
+     - User mappings
+     - Timestamps and sync history
+
+4. **Execute Selected Action**
+   Based on the action provided:
+
+   ### Audit Action
+   - Scan all GitHub issues and PRs for Linear references
+   - Query Linear for all tasks with GitHub references
+   - Identify:
+     - Orphaned references (deleted items)
+     - Mismatched references
+     - Duplicate mappings
+     - Missing bidirectional links
+   - Generate detailed audit report
+
+   ### Repair Action
+   - Fix identified reference issues:
+     - Update Linear tasks with missing GitHub links
+     - Add Linear references to GitHub items
+     - Remove references to deleted items
+     - Consolidate duplicate mappings
+   - Create backup before making changes
+   - Log all modifications
+
+   ### Map Action
+   - Display current reference mappings
+   - Show visual representation of connections
+   - Include statistics on reference health
+   - Highlight problematic mappings
+
+   ### Validate Action
+   - Perform deep validation of references
+   - Check that linked items actually exist
+   - Verify field consistency
+   - Test bidirectional navigation
+   - Report validation results
+
+   ### Export Action
+   - Export reference data in multiple formats
+   - Support JSON, CSV, and Markdown
+   - Include metadata and history
+   - Provide import instructions
 
 ## Usage
 ```bash

@@ -1,7 +1,66 @@
-# Milestone Tracker & Deliverables Monitor
+# Milestone Tracker
 
-## Purpose
 Track project milestones, monitor deliverable progress, predict completion dates, and provide early warning for at-risk milestones using data from Linear, GitHub, and historical velocity.
+
+## Instructions
+
+1. **Check Available Tools**
+   - Verify Linear MCP server connection
+   - Check GitHub CLI availability
+   - Test git repository access
+   - Ensure required permissions
+
+2. **Gather Milestone Data**
+   - Query Linear for project milestones and roadmap items
+   - Fetch GitHub milestones and their associated issues
+   - Analyze git tags for historical release patterns
+   - Review project documentation for roadmap information
+   - Collect all active and upcoming milestones
+
+3. **Analyze Milestone Progress**
+   For each milestone:
+   - Count completed vs. total tasks
+   - Calculate percentage complete
+   - Measure velocity trends
+   - Identify blocking issues
+   - Track time remaining
+
+4. **Perform Predictive Analysis**
+   - Calculate burn-down rate from historical data
+   - Project completion dates based on velocity
+   - Factor in team capacity and holidays
+   - Identify critical path items
+   - Assess confidence levels for predictions
+
+5. **Risk Assessment**
+   Evaluate each milestone for:
+   - Schedule risk (falling behind)
+   - Scope risk (expanding requirements)
+   - Resource risk (team availability)
+   - Dependency risk (blocked by others)
+   - Technical risk (unknowns)
+
+6. **Generate Milestone Report**
+   Create comprehensive report showing:
+   - Milestone timeline visualization
+   - Progress indicators for each milestone
+   - Predicted completion dates with confidence
+   - Risk heat map
+   - Recommended actions for at-risk items
+
+7. **Track Dependencies**
+   - Map inter-milestone dependencies
+   - Identify cross-team dependencies
+   - Highlight critical path
+   - Show dependency impact on schedule
+
+8. **Provide Recommendations**
+   Based on analysis:
+   - Suggest scope adjustments
+   - Recommend resource reallocation
+   - Propose timeline changes
+   - Identify quick wins
+   - Highlight blockers needing attention
 
 ## Prerequisites
 - Git repository access

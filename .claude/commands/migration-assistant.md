@@ -1,7 +1,69 @@
 # Migration Assistant
 
-## Description
 Help teams migrate between GitHub Issues and Linear with comprehensive data preservation, validation, and rollback capabilities. This enterprise-ready command ensures safe, complete migrations.
+
+## Instructions
+
+1. **Check Prerequisites**
+   - Verify GitHub CLI (`gh`) is installed and authenticated
+   - Check if Linear MCP server is connected
+   - Ensure sufficient permissions in both systems
+   - Confirm backup storage is available
+
+2. **Parse Migration Parameters**
+   - Extract action and options from: **$ARGUMENTS**
+   - Valid actions: plan, analyze, migrate, verify, rollback
+   - Determine source and target systems
+   - Set migration scope and filters
+
+3. **Initialize Migration Environment**
+   - Create migration workspace directory
+   - Set up logging and audit trails
+   - Initialize checkpoint system
+   - Prepare rollback mechanisms
+
+4. **Execute Migration Action**
+   Based on the selected action:
+
+   ### Plan Action
+   - Analyze source system structure
+   - Map fields between systems
+   - Identify potential conflicts
+   - Generate migration strategy
+   - Estimate time and resources
+   - Create detailed migration plan
+
+   ### Analyze Action
+   - Count items to migrate
+   - Check data compatibility
+   - Identify custom fields
+   - Assess attachment sizes
+   - Calculate migration impact
+   - Generate pre-migration report
+
+   ### Migrate Action
+   - Create full backup of source data
+   - Execute migration in batches
+   - Transform data between formats
+   - Preserve relationships
+   - Handle attachments and media
+   - Create progress checkpoints
+   - Log all operations
+
+   ### Verify Action
+   - Compare source and target data
+   - Validate all items migrated
+   - Check relationship integrity
+   - Verify custom field mappings
+   - Test cross-references
+   - Generate verification report
+
+   ### Rollback Action
+   - Load rollback checkpoint
+   - Restore original state
+   - Clean up partial migrations
+   - Verify rollback completion
+   - Generate rollback report
 
 ## Usage
 ```bash
