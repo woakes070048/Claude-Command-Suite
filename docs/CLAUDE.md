@@ -8,7 +8,7 @@ This repository contains custom slash commands for Claude Code that provide spec
 
 ## Repository Structure
 
-- `.claude/commands/` - Contains 81 specialized command files that define workflows for development tasks
+- `.claude/commands/` - Contains 82 specialized command files that define workflows for development tasks
 - `install.sh` - Installation script for setting up commands in projects (supports project-specific, global, and symlink installation)
 - `README.md` - Comprehensive documentation for installation and usage
 
@@ -16,7 +16,8 @@ This repository contains custom slash commands for Claude Code that provide spec
 
 The commands are organized into several categories:
 
-**Analysis Commands (7):**
+**Analysis Commands (8):**
+- `ultra-think` - Ultra-deep thinking mode for complex problem-solving
 - `architecture-review` - Comprehensive architectural analysis
 - `code-review` - Complete code quality review with security and performance analysis  
 - `security-audit` - Security vulnerability assessment
@@ -91,8 +92,11 @@ The commands are organized into several categories:
 **Maintenance Commands (1):**
 - `modernize-deps` - Update and modernize dependencies safely
 
-**Project Management Commands (1):**
-- `project-to-linear` - Analyze project requirements and create comprehensive task lists in Linear
+**Project Management Commands (24):**
+- Sprint Planning & Analysis (5 commands)
+- Task Management (6 commands)  
+- GitHub-Linear Synchronization (10 commands)
+- Advanced Synchronization (3 commands)
 
 ## Command Structure
 
