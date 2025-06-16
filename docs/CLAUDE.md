@@ -8,7 +8,7 @@ This repository contains custom slash commands for Claude Code that provide spec
 
 ## Repository Structure
 
-- `.claude/commands/` - Contains 56+ specialized command files that define workflows for development tasks
+- `.claude/commands/` - Contains 81 specialized command files that define workflows for development tasks
 - `install.sh` - Installation script for setting up commands in projects (supports project-specific, global, and symlink installation)
 - `README.md` - Comprehensive documentation for installation and usage
 
