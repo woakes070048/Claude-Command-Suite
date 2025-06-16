@@ -98,6 +98,40 @@ Custom slash commands for Claude Code that provide structured workflows for comm
 ### 🔄 Maintenance Commands
 - `/project:modernize-deps` - Update and modernize dependencies safely
 
+### 📋 Project Management Commands
+
+#### Sprint Planning & Analysis
+- `/project:sprint-planning` - Analyze current Linear tasks and help plan sprints with optimal capacity allocation
+- `/project:standup-report` - Generate daily standup reports from git commits and Linear task updates
+- `/project:project-health-check` - Assess project health with metrics on velocity, quality, and team performance
+- `/project:retrospective-analyzer` - Facilitate sprint retrospectives with data-driven insights and action items
+- `/project:milestone-tracker` - Track project milestones and deliverables with predictive analytics
+
+#### Task Management
+- `/project:project-to-linear` - Analyze project requirements and create comprehensive task lists in Linear
+- `/project:task-from-pr` - Convert pull requests into Linear tasks with automatic metadata extraction
+- `/project:dependency-mapper` - Visualize and manage task dependencies with critical path analysis
+- `/project:estimate-assistant` - Provide data-driven task estimation based on historical velocity
+- `/project:code-to-task` - Generate tasks from TODO/FIXME comments and technical debt markers
+- `/project:team-workload-balancer` - Optimize team task distribution based on capacity and expertise
+
+#### GitHub-Linear Synchronization
+- `/project:sync-issues-to-linear` - One-way sync GitHub Issues to Linear with field mapping
+- `/project:sync-linear-to-issues` - One-way sync Linear tasks to GitHub Issues  
+- `/project:bidirectional-sync` - Full two-way synchronization with conflict resolution
+- `/project:issue-to-linear-task` - Convert specific GitHub issue to Linear task
+- `/project:linear-task-to-issue` - Convert specific Linear task to GitHub issue
+- `/project:sync-pr-to-task` - Link pull requests with Linear tasks and update status
+- `/project:sync-status` - Monitor synchronization health and consistency
+- `/project:bulk-import-issues` - Mass import GitHub issues to Linear with progress tracking
+- `/project:issue-triage` - Intelligently triage GitHub issues into Linear projects
+- `/project:sync-automation-setup` - Configure automated synchronization with webhooks
+
+#### Advanced Synchronization
+- `/project:cross-reference-manager` - Maintain and verify references between GitHub and Linear
+- `/project:sync-conflict-resolver` - Handle synchronization conflicts with smart resolution
+- `/project:migration-assistant` - Enterprise-ready migration between GitHub and Linear
+
 ## How It Works
 
 Commands are available as `/project:command-name` in Claude Code. Each command follows a structured workflow that Claude executes automatically, ensuring consistent and thorough results across different projects.

@@ -1,0 +1,113 @@
+# Cross-Reference Manager
+
+## Description
+Maintain and verify references between GitHub and Linear, ensuring data integrity across both platforms. This command provides comprehensive reference tracking, validation, and repair capabilities.
+
+## Usage
+```bash
+cross-reference-manager [action] [options]
+```
+
+## Actions
+- `audit` - Scan and report on reference integrity
+- `repair` - Fix broken or missing references
+- `map` - Display reference mappings
+- `validate` - Verify reference consistency
+- `export` - Export reference data
+
+## Options
+- `--scope <type>` - Limit to specific types (issues, prs, tasks)
+- `--fix-orphans` - Automatically fix orphaned references
+- `--dry-run` - Preview changes without applying
+- `--deep-scan` - Perform thorough validation
+- `--format <type>` - Output format (json, csv, table)
+- `--since <date>` - Process items created after date
+- `--backup` - Create backup before modifications
+
+## Examples
+```bash
+# Audit all references
+cross-reference-manager audit
+
+# Repair broken references with preview
+cross-reference-manager repair --dry-run
+
+# Map references for specific date range
+cross-reference-manager map --since "2024-01-01"
+
+# Deep validation with orphan fixes
+cross-reference-manager validate --deep-scan --fix-orphans
+
+# Export reference data
+cross-reference-manager export --format json > refs.json
+```
+
+## Features
+- **Reference Integrity Checking**
+  - Verify bidirectional links
+  - Detect orphaned references
+  - Identify duplicate mappings
+  - Check reference format validity
+
+- **Smart Reference Repair**
+  - Reconstruct missing references from metadata
+  - Update outdated reference formats
+  - Merge duplicate references
+  - Remove invalid references
+
+- **Comprehensive Mapping**
+  - GitHub Issue ↔ Linear Issue
+  - GitHub PR ↔ Linear Task
+  - Comments and attachments
+  - User mappings
+
+- **Audit Trail**
+  - Log all reference modifications
+  - Track reference history
+  - Generate integrity reports
+  - Monitor reference health
+
+## Reference Storage
+```json
+{
+  "mappings": {
+    "github_issue_123": {
+      "linear_id": "LIN-456",
+      "type": "issue",
+      "created": "2024-01-15T10:30:00Z",
+      "last_verified": "2024-01-20T14:00:00Z",
+      "confidence": 0.95
+    }
+  },
+  "metadata": {
+    "last_audit": "2024-01-20T14:00:00Z",
+    "total_references": 1543,
+    "broken_references": 12
+  }
+}
+```
+
+## Error Handling
+- Automatic retry for API failures
+- Batch processing to avoid rate limits
+- Transaction-like operations with rollback
+- Detailed error logging
+
+## Best Practices
+- Run audit weekly to maintain integrity
+- Always use --dry-run before repair operations
+- Export references before major changes
+- Monitor reference health metrics
+
+## Integration Points
+- Works with bidirectional-sync command
+- Supports sync-status monitoring
+- Compatible with migration-assistant
+- Provides data for analytics
+
+## Required MCP Servers
+- mcp-server-github
+- mcp-server-linear
+
+## Notes
+This command maintains a local reference database for performance and reliability. The database is automatically backed up before modifications.
