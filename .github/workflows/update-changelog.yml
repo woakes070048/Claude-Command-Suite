@@ -137,17 +137,19 @@ jobs:
           
           # Add new commands section if any
           if [ -n "${{ steps.extract-info.outputs.new_commands }}" ]; then
-            NEW_ENTRY="$NEW_ENTRY"$'\n'"### Added"$'\n'"${{ steps.extract-info.outputs.new_commands }}"
+            NEW_COMMANDS="${{ steps.extract-info.outputs.new_commands }}"
+            NEW_ENTRY="$NEW_ENTRY"$'\n'"### Added"$'\n'"$NEW_COMMANDS"
           fi
           
           # Add updated commands section if any
           if [ -n "${{ steps.extract-info.outputs.updated_commands }}" ]; then
+            UPDATED_COMMANDS="${{ steps.extract-info.outputs.updated_commands }}"
             if [ -z "${{ steps.extract-info.outputs.new_commands }}" ]; then
               NEW_ENTRY="$NEW_ENTRY"$'\n'"### Changed"
             else
               NEW_ENTRY="$NEW_ENTRY"$'\n'"### Changed"
             fi
-            NEW_ENTRY="$NEW_ENTRY"$'\n'"${{ steps.extract-info.outputs.updated_commands }}"
+            NEW_ENTRY="$NEW_ENTRY"$'\n'"$UPDATED_COMMANDS"
           fi
           
           # Add command count update
