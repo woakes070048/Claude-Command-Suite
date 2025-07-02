@@ -1,6 +1,6 @@
 # Claude Code Custom Slash Commands
 
-![Total Commands](https://img.shields.io/badge/Total%20Commands-82%20and%20growing!-brightgreen?style=for-the-badge)
+![Total Commands](https://img.shields.io/badge/Total%20Commands-85%20and%20growing!-brightgreen?style=for-the-badge)
 <!-- Dynamic badge (will work after PR merge): ![Total Commands](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.github/badges/command-count.json&style=for-the-badge) -->
 
 > **Inspired by Anthropic's Claude Code Best Practices**: These custom commands are designed following the principles and recommendations outlined in [Anthropic's Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) to maximize effectiveness and provide structured workflows for software development.
@@ -43,7 +43,7 @@ claude code
 
 ## Available Commands
 
-🚀 **82 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
+🚀 **85 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
 
 ### 🔍 Analysis Commands
 - `/project:ultra-think` - Engage ultra-deep thinking mode for complex problem-solving
