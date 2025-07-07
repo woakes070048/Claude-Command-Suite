@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] - 2025-01-07
+## [1.1.0] - 2025-07-07
 
 ### Added
 - **Utility Commands** (4 new commands contributed by IndyDevDan/DislerH from claude-code-hooks-mastery):
