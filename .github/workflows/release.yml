@@ -4,9 +4,12 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - '**.md'
+      - 'docs/**'
       - '.github/**'
       - '!.github/workflows/release.yml'
+      - 'README.md'
+      - 'CONTRIBUTING.md'
+      - 'scripts/**.md'
   workflow_dispatch:
     inputs:
       force-release:
@@ -23,17 +26,25 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    # Skip if the commit was made by GitHub Actions
+    if: github.event.head_commit.author.name != 'GitHub Action'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Setup Git
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          
+          # Ensure we have the full history
+          if [ -f .git/shallow ]; then
+            git fetch --unshallow
+          fi
 
       - name: Get current version
         id: current-version
@@ -233,7 +244,16 @@ jobs:
       - name: Push changes
         if: steps.analyze-commits.outputs.bump_type != 'none'
         run: |
-          git push origin main
+          # Check if there are changes to push
+          if git diff --quiet origin/main HEAD; then
+            echo "No changes to push"
+          else
+            echo "Pushing changes to main branch..."
+            git push origin main || {
+              echo "::warning::Failed to push changes. This might be due to branch protection rules."
+              echo "::warning::The release will continue without pushing version updates."
+            }
+          fi
 
       - name: Generate release notes
         if: steps.analyze-commits.outputs.bump_type != 'none'
