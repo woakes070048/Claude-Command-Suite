@@ -8,7 +8,7 @@ This repository contains custom slash commands for Claude Code that provide spec
 
 ## Repository Structure
 
-- `.claude/commands/` - Contains 82 specialized command files that define workflows for development tasks
+- `.claude/commands/` - Contains 89 specialized command files that define workflows for development tasks
 - `install.sh` - Installation script for setting up commands in projects (supports project-specific, global, and symlink installation)
 - `README.md` - Comprehensive documentation for installation and usage
 
@@ -91,6 +91,12 @@ The commands are organized into several categories:
 
 **Maintenance Commands (1):**
 - `modernize-deps` - Update and modernize dependencies safely
+
+**Utility Commands (4):**
+- `all-tools` - List all available tools in TypeScript function signature format
+- `git-status` - Comprehensive git repository status analysis
+- `prime` - Load essential context for new agent sessions
+- `sentient` - Test Claude Code hook protections (demonstration command)
 
 **Project Management Commands (24):**
 - Sprint Planning & Analysis (5 commands)

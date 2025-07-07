@@ -1,6 +1,6 @@
 # Claude Code Custom Slash Commands
 
-![Total Commands](https://img.shields.io/badge/Total%20Commands-85%20and%20growing!-brightgreen?style=for-the-badge)
+![Total Commands](https://img.shields.io/badge/Total%20Commands-89%20and%20growing!-brightgreen?style=for-the-badge)
 <!-- Dynamic badge (will work after PR merge): ![Total Commands](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.github/badges/command-count.json&style=for-the-badge) -->
 
 > **Inspired by Anthropic's Claude Code Best Practices**: These custom commands are designed following the principles and recommendations outlined in [Anthropic's Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) to maximize effectiveness and provide structured workflows for software development.
@@ -43,7 +43,7 @@ claude code
 
 ## Available Commands
 
-🚀 **85 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
+🚀 **89 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
 
 ### 🔍 Analysis Commands
 - `/project:ultra-think` - Engage ultra-deep thinking mode for complex problem-solving
@@ -120,6 +120,14 @@ claude code
 
 ### 🔄 Maintenance Commands
 - `/project:modernize-deps` - Update and modernize dependencies safely
+
+### 🔧 Utility Commands
+- `/project:all-tools` - List all available tools in TypeScript function signature format
+- `/project:git-status` - Comprehensive git repository status analysis
+- `/project:prime` - Load essential context for new agent sessions
+- `/project:sentient` - Test Claude Code hook protections (demo command)
+
+*Utility commands contributed by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
 
 ### 📋 Project Management Commands
 

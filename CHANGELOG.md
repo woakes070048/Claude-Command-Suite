@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased] - 2025-01-07
+
+### Added
+- **Utility Commands** (4 new commands contributed by IndyDevDan/DislerH from claude-code-hooks-mastery):
+  - `all-tools` - List all available tools in TypeScript function signature format
+  - `git-status` - Comprehensive git repository status analysis
+  - `prime` - Load essential context for new agent sessions
+  - `sentient` - Test Claude Code hook protections (demonstration command)
+
 
 
 
