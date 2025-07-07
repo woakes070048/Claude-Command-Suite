@@ -1,6 +1,10 @@
 # Release Workflow Permissions Setup
 
-If the release workflow fails with permission errors when pushing changes, you have several options:
+✅ **RELEASE_TOKEN has been configured for this repository**
+
+The release workflow is now using a Personal Access Token (RELEASE_TOKEN) which allows it to push changes back to the repository, even with branch protection rules enabled.
+
+## Current Configuration
 
 ## Option 1: Use a Personal Access Token (Recommended for private repos)
 
