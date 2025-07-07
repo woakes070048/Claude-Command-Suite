@@ -10,6 +10,14 @@ All notable changes to this project will be documented in this file.
   - `git-status` - Comprehensive git repository status analysis
   - `prime` - Load essential context for new agent sessions
   - `sentient` - Test Claude Code hook protections (demonstration command)
+- **DevOps Commands**:
+  - `setup-automated-releases` - Implement automated release system with conventional commits and GitHub Actions
+- **Release Automation**:
+  - GitHub Actions workflow for automated releases
+  - PR validation workflow for conventional commits
+  - Contributing guidelines with commit conventions
+  - Pull request template
+  - Release configuration for GitHub
 
 
 

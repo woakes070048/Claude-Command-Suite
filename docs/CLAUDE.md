@@ -8,7 +8,7 @@ This repository contains custom slash commands for Claude Code that provide spec
 
 ## Repository Structure
 
-- `.claude/commands/` - Contains 89 specialized command files that define workflows for development tasks
+- `.claude/commands/` - Contains 90 specialized command files that define workflows for development tasks
 - `install.sh` - Installation script for setting up commands in projects (supports project-specific, global, and symlink installation)
 - `README.md` - Comprehensive documentation for installation and usage
 
@@ -68,7 +68,7 @@ The commands are organized into several categories:
 - `add-authentication-system` - Implement authentication and authorization
 - `setup-rate-limiting` - Configure API rate limiting
 
-**DevOps Commands (9):**
+**DevOps Commands (10):**
 - `containerize-application` - Create Docker configuration
 - `setup-kubernetes-deployment` - Generate Kubernetes manifests
 - `setup-monitoring-observability` - Add monitoring, logging, and tracing
@@ -78,6 +78,7 @@ The commands are organized into several categories:
 - `rollback-deploy` - Safely rollback deployments
 - `prepare-release` - Prepare production releases
 - `clean-branches` - Clean up merged and stale branches
+- `setup-automated-releases` - Implement automated release system with conventional commits
 
 **Database Commands (3):**
 - `design-database-schema` - Design and validate database schemas

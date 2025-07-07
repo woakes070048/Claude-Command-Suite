@@ -1,6 +1,9 @@
 # Claude Code Custom Slash Commands
 
-![Total Commands](https://img.shields.io/badge/Total%20Commands-89%20and%20growing!-brightgreen?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.0.1-blue?style=for-the-badge)
+![Total Commands](https://img.shields.io/badge/Total%20Commands-90%20and%20growing!-brightgreen?style=for-the-badge)
+![GitHub Release](https://img.shields.io/github/v/release/qdhenry/Claude-Command-Suite?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)
 <!-- Dynamic badge (will work after PR merge): ![Total Commands](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.github/badges/command-count.json&style=for-the-badge) -->
 
 > **Inspired by Anthropic's Claude Code Best Practices**: These custom commands are designed following the principles and recommendations outlined in [Anthropic's Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) to maximize effectiveness and provide structured workflows for software development.
@@ -43,7 +46,7 @@ claude code
 
 ## Available Commands
 
-🚀 **89 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
+🚀 **90 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
 
 ### 🔍 Analysis Commands
 - `/project:ultra-think` - Engage ultra-deep thinking mode for complex problem-solving
@@ -107,6 +110,7 @@ claude code
 - `/project:rollback-deploy` - Safely rollback deployments
 - `/project:prepare-release` - Prepare production releases with validation
 - `/project:clean-branches` - Clean up merged and stale branches
+- `/project:setup-automated-releases` - Implement automated release system with conventional commits
 
 ### 🗄️ Database Commands
 - `/project:design-database-schema` - Design and validate database schemas
@@ -276,6 +280,30 @@ This script will:
 - **Total Count Tracking**: Maintains accurate count of total available commands  
 - **Description Extraction**: Pulls descriptions directly from command files
 - **Backup Safety**: Creates backups before making changes
+
+## Release Process
+
+This project uses automated releases powered by [Conventional Commits](https://www.conventionalcommits.org/). Every merge to the main branch triggers our release workflow which:
+
+1. **Analyzes commits** to determine version bump type
+2. **Updates version** automatically based on commit types
+3. **Generates release notes** from commit messages
+4. **Creates GitHub releases** with downloadable bundles
+5. **Updates changelog** with categorized changes
+
+### Version Bumping Rules
+
+- `fix:` commits → Patch release (1.0.0 → 1.0.1)
+- `feat:` commits → Minor release (1.0.0 → 1.1.0)  
+- Breaking changes → Major release (1.0.0 → 2.0.0)
+
+### Making Releases
+
+Releases happen automatically when you:
+1. Merge PRs with conventional commit titles
+2. Push directly to main with conventional commits
+
+For details on contributing and commit formats, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Requirements
 
