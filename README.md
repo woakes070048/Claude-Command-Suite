@@ -1,6 +1,6 @@
 # Claude Code Custom Slash Commands
 
-![Version](https://img.shields.io/badge/version-1.6.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)
 ![Total Commands](https://img.shields.io/badge/Total%20Commands-90%20and%20growing!-brightgreen?style=for-the-badge)
 ![GitHub Release](https://img.shields.io/github/v/release/qdhenry/Claude-Command-Suite?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)
@@ -8,7 +8,7 @@
 
 > **Inspired by Anthropic's Claude Code Best Practices**: These custom commands are designed following the principles and recommendations outlined in [Anthropic's Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) to maximize effectiveness and provide structured workflows for software development.
 
-Custom slash commands for Claude Code that provide structured workflows for common software development tasks. Get comprehensive analysis, feature development, and code maintenance with simple `/project:command-name` commands.
+Custom slash commands for Claude Code that provide structured workflows for common software development tasks. Get comprehensive analysis, feature development, and code maintenance with organized namespace commands like `/dev:code-review`, `/test:generate-test-cases`, and `/deploy:prepare-release`.
 
 ## Quick Start
 
@@ -20,7 +20,7 @@ Simply add command files directly to your project's `.claude/commands/` folder:
 mkdir -p .claude/commands
 
 # Download specific commands you need
-curl -o .claude/commands/code-review.md https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.claude/commands/code-review.md
+curl -o .claude/commands/dev/code-review.md https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.claude/commands/dev/code-review.md
 
 # Or copy your own custom command files
 cp my-custom-command.md .claude/commands/
@@ -39,133 +39,149 @@ chmod +x install.sh
 ### Start Using Commands
 ```bash
 claude code
-/project:code-review           # Review your entire codebase
-/project:create-feature login  # Build a new feature
-/project:security-audit        # Check for security issues
+/dev:code-review           # Review your entire codebase
+/project:create-feature    # Build a new feature
+/security:security-audit   # Check for security issues
 ```
 
 ## Available Commands
 
-🚀 **90 Total Commands and Growing!** - From code analysis to project management, we've got you covered.
+🚀 **90+ Commands Organized by Namespace** - Discover the right tool for any task with our namespace organization.
 
-### 🔍 Analysis Commands
-- `/project:ultra-think` - Engage ultra-deep thinking mode for complex problem-solving
-- `/project:architecture-review` - Analyze system architecture and design patterns
-- `/project:code-review` - Complete code quality and security review
-- `/project:security-audit` - Security vulnerability assessment
-- `/project:performance-audit` - Find performance bottlenecks
-- `/project:dependency-audit` - Check dependency security and updates
-- `/project:explain-code` - Explain complex code sections and architecture
-- `/project:test-coverage` - Analyze and improve test coverage
+## Command Namespaces
 
-### 🛠️ Development Commands
-- `/project:create-feature` - Complete feature development workflow
-- `/project:fix-issue` - Structured GitHub issue resolution
-- `/project:refactor-code` - Safe refactoring with testing
-- `/project:debug-error` - Systematic debugging approach
-- `/project:optimize-build` - Build system improvements
-- `/project:optimize-bundle-size` - Reduce application bundle size
-- `/project:write-tests` - Generate comprehensive test suites
+### 🚀 `/project:*` - Project Management
+Initialize, configure, and manage projects. Includes commands for creating new projects, adding packages, tracking milestones, and monitoring project health.
 
-### 🚀 Project Setup Commands
-- `/project:init-project [type] [framework]` - Initialize new project with industry best practices
-- `/project:setup-monorepo [tool]` - Configure monorepo structure with workspace management
-- `/project:add-package [name] [type]` - Add new package/module with proper structure
-- `/project:setup-development-environment` - Configure development environment and tools
-- `/project:migrate-to-typescript` - Convert JavaScript project to TypeScript
-- `/project:setup-linting` - Configure code linting and quality tools
-- `/project:setup-formatting` - Set up code formatting standards
-- `/project:ci-setup` - Configure continuous integration pipelines
+- `/project:init-project` - Initialize new project with essential structure
+- `/project:add-package` - Add and configure new project dependencies  
+- `/project:create-feature` - Scaffold new feature with boilerplate code
+- `/project:milestone-tracker` - Track and monitor project milestone progress
+- `/project:project-health-check` - Analyze overall project health and metrics
+- `/project:project-to-linear` - Sync project structure to Linear workspace
 
-### 🧪 Testing Commands
-- `/project:setup-comprehensive-testing` - Set up complete testing stack (unit, integration, e2e, visual)
-- `/project:generate-test-cases [file/function]` - Auto-generate test cases for existing code
-- `/project:setup-visual-testing` - Configure visual regression testing for UI components
-- `/project:add-property-based-testing` - Set up property-based testing framework
-- `/project:setup-load-testing` - Configure performance and load testing infrastructure
-- `/project:add-mutation-testing` - Set up mutation testing to verify test quality
-- `/project:e2e-setup` - Configure end-to-end testing infrastructure
+### 💻 `/dev:*` - Development Tools
+Essential development utilities including code review, debugging, refactoring, and specialized AI modes for enhanced assistance.
 
-### 📚 Documentation Commands
-- `/project:generate-api-documentation` - Auto-generate comprehensive API documentation
-- `/project:create-architecture-documentation` - Generate system architecture diagrams and docs
-- `/project:create-onboarding-guide` - Generate comprehensive getting-started guide
-- `/project:doc-api` - Create detailed API documentation
-- `/project:add-changelog` - Set up automated changelog generation
-- `/project:migration-guide` - Create migration guides for major changes
-- `/project:troubleshooting-guide` - Generate troubleshooting documentation
+- `/dev:code-review` - Comprehensive code quality review
+- `/dev:debug-error` - Systematically debug and fix errors
+- `/dev:explain-code` - Analyze and explain code functionality
+- `/dev:refactor-code` - Intelligently refactor and improve code quality
+- `/dev:fix-issue` - Identify and resolve code issues
+- `/dev:ultra-think` - Deep analysis and problem solving mode
+- `/dev:prime` - Enhanced AI mode for complex tasks
+- `/dev:sentient` - AI assistant with advanced problem-solving capabilities
+- `/dev:all-tools` - Display all available development tools
+- `/dev:git-status` - Show detailed git repository status
+- `/dev:clean-branches` - Clean up merged and stale git branches
+- `/dev:directory-deep-dive` - Analyze directory structure and purpose
+- `/dev:code-to-task` - Convert code analysis to Linear tasks
 
-### 🔒 Security Commands  
-- `/project:security-hardening` - Apply comprehensive security best practices
-- `/project:add-authentication-system` - Implement robust authentication and authorization
-- `/project:setup-rate-limiting` - Configure API rate limiting and protection
+### 🧪 `/test:*` - Testing Suite
+Comprehensive testing tools covering unit tests, integration tests, E2E tests, coverage analysis, mutation testing, and visual regression testing.
 
-### 🐳 DevOps Commands
-- `/project:containerize-application` - Create optimal Docker configuration
-- `/project:setup-kubernetes-deployment` - Generate Kubernetes manifests for deployment
-- `/project:setup-monitoring-observability` - Add comprehensive monitoring, logging, and tracing
-- `/project:add-performance-monitoring` - Implement detailed performance monitoring
-- `/project:setup-cdn-optimization` - Configure CDN and asset optimization
-- `/project:hotfix-deploy` - Deploy critical fixes with validation
-- `/project:rollback-deploy` - Safely rollback deployments
-- `/project:prepare-release` - Prepare production releases with validation
-- `/project:clean-branches` - Clean up merged and stale branches
-- `/project:setup-automated-releases` - Implement automated release system with conventional commits
+- `/test:generate-test-cases` - Generate comprehensive test cases automatically
+- `/test:write-tests` - Write unit and integration tests
+- `/test:test-coverage` - Analyze and report test coverage
+- `/test:setup-comprehensive-testing` - Setup complete testing infrastructure
+- `/test:e2e-setup` - Configure end-to-end testing suite
+- `/test:setup-visual-testing` - Setup visual regression testing
+- `/test:setup-load-testing` - Configure load and performance testing
+- `/test:add-mutation-testing` - Setup mutation testing for code quality
+- `/test:add-property-based-testing` - Implement property-based testing framework
+- `/test:test-changelog-automation` - Automate changelog testing workflow
 
-### 🗄️ Database Commands
-- `/project:design-database-schema` - Design and validate database schemas
-- `/project:create-database-migrations` - Generate safe database migrations
-- `/project:optimize-database-performance` - Optimize database queries and performance
+### 🔒 `/security:*` - Security & Compliance
+Security auditing, dependency scanning, authentication implementation, and security hardening tools to keep your codebase secure.
 
-### 🌐 API Commands
-- `/project:design-rest-api` - Design RESTful API endpoints
-- `/project:implement-graphql-api` - Implement GraphQL API layer
-- `/project:implement-caching-strategy` - Add intelligent caching systems
+- `/security:security-audit` - Perform comprehensive security assessment
+- `/security:dependency-audit` - Audit dependencies for security vulnerabilities
+- `/security:security-hardening` - Harden application security configuration
+- `/security:add-authentication-system` - Implement secure user authentication system
 
-### 🔄 Maintenance Commands
-- `/project:modernize-deps` - Update and modernize dependencies safely
+### ⚡ `/performance:*` - Performance Optimization
+Tools for optimizing build times, bundle sizes, database queries, caching strategies, and overall application performance.
 
-### 🔧 Utility Commands
-- `/project:all-tools` - List all available tools in TypeScript function signature format
-- `/project:git-status` - Comprehensive git repository status analysis
-- `/project:prime` - Load essential context for new agent sessions
-- `/project:sentient` - Test Claude Code hook protections (demo command)
+- `/performance:performance-audit` - Audit application performance metrics
+- `/performance:optimize-build` - Optimize build processes and speed
+- `/performance:optimize-bundle-size` - Reduce and optimize bundle sizes
+- `/performance:optimize-database-performance` - Optimize database queries and performance
+- `/performance:implement-caching-strategy` - Design and implement caching solutions
+- `/performance:add-performance-monitoring` - Setup application performance monitoring
+- `/performance:setup-cdn-optimization` - Configure CDN for optimal delivery
 
-*Utility commands contributed by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
+### 🔄 `/sync:*` - Integration & Synchronization
+Bidirectional sync between GitHub Issues and Linear, PR tracking, conflict resolution, and cross-platform task management.
 
-### 📋 Project Management Commands
+- `/sync:sync-issues-to-linear` - Sync GitHub issues to Linear workspace
+- `/sync:sync-linear-to-issues` - Sync Linear tasks to GitHub issues
+- `/sync:bidirectional-sync` - Enable bidirectional GitHub-Linear synchronization
+- `/sync:issue-to-linear-task` - Convert GitHub issues to Linear tasks
+- `/sync:linear-task-to-issue` - Convert Linear tasks to GitHub issues
+- `/sync:sync-pr-to-task` - Link pull requests to Linear tasks
+- `/sync:sync-status` - Monitor GitHub-Linear sync health status
+- `/sync:bulk-import-issues` - Bulk import GitHub issues to Linear
+- `/sync:cross-reference-manager` - Manage cross-platform reference links
+- `/sync:sync-automation-setup` - Setup automated synchronization workflows
+- `/sync:sync-conflict-resolver` - Resolve synchronization conflicts automatically
+- `/sync:task-from-pr` - Create Linear tasks from pull requests
 
-#### Sprint Planning & Analysis
-- `/project:sprint-planning` - Analyze current Linear tasks and help plan sprints with optimal capacity allocation
-- `/project:standup-report` - Generate daily standup reports from git commits and Linear task updates
-- `/project:project-health-check` - Assess project health with metrics on velocity, quality, and team performance
-- `/project:retrospective-analyzer` - Facilitate sprint retrospectives with data-driven insights and action items
-- `/project:milestone-tracker` - Track project milestones and deliverables with predictive analytics
+### 📦 `/deploy:*` - Deployment & Release
+Release preparation, automated deployments, rollback capabilities, containerization, and Kubernetes deployment management.
 
-#### Task Management
-- `/project:project-to-linear` - Analyze project requirements and create comprehensive task lists in Linear
-- `/project:task-from-pr` - Convert pull requests into Linear tasks with automatic metadata extraction
-- `/project:dependency-mapper` - Visualize and manage task dependencies with critical path analysis
-- `/project:estimate-assistant` - Provide data-driven task estimation based on historical velocity
-- `/project:code-to-task` - Generate tasks from TODO/FIXME comments and technical debt markers
-- `/project:team-workload-balancer` - Optimize team task distribution based on capacity and expertise
+- `/deploy:prepare-release` - Prepare and validate release packages
+- `/deploy:hotfix-deploy` - Deploy critical hotfixes quickly
+- `/deploy:rollback-deploy` - Rollback deployment to previous version
+- `/deploy:setup-automated-releases` - Setup automated release workflows
+- `/deploy:containerize-application` - Containerize application for deployment
+- `/deploy:setup-kubernetes-deployment` - Configure Kubernetes deployment manifests
+- `/deploy:ci-setup` - Setup continuous integration pipeline
+- `/deploy:add-changelog` - Generate and maintain project changelog
+- `/deploy:changelog-demo-command` - Demo changelog automation features
 
-#### GitHub-Linear Synchronization
-- `/project:sync-issues-to-linear` - One-way sync GitHub Issues to Linear with field mapping
-- `/project:sync-linear-to-issues` - One-way sync Linear tasks to GitHub Issues  
-- `/project:bidirectional-sync` - Full two-way synchronization with conflict resolution
-- `/project:issue-to-linear-task` - Convert specific GitHub issue to Linear task
-- `/project:linear-task-to-issue` - Convert specific Linear task to GitHub issue
-- `/project:sync-pr-to-task` - Link pull requests with Linear tasks and update status
-- `/project:sync-status` - Monitor synchronization health and consistency
-- `/project:bulk-import-issues` - Mass import GitHub issues to Linear with progress tracking
-- `/project:issue-triage` - Intelligently triage GitHub issues into Linear projects
-- `/project:sync-automation-setup` - Configure automated synchronization with webhooks
+### 📚 `/docs:*` - Documentation Generation
+Automated documentation tools for APIs, architecture diagrams, onboarding guides, and troubleshooting documentation.
 
-#### Advanced Synchronization
-- `/project:cross-reference-manager` - Maintain and verify references between GitHub and Linear
-- `/project:sync-conflict-resolver` - Handle synchronization conflicts with smart resolution
-- `/project:migration-assistant` - Enterprise-ready migration between GitHub and Linear
+- `/docs:generate-api-documentation` - Auto-generate API reference documentation
+- `/docs:doc-api` - Generate API documentation from code
+- `/docs:create-architecture-documentation` - Generate comprehensive architecture documentation
+- `/docs:create-onboarding-guide` - Create developer onboarding guide
+- `/docs:migration-guide` - Create migration guides for updates
+- `/docs:troubleshooting-guide` - Generate troubleshooting documentation
+
+### 🔧 `/setup:*` - Configuration & Setup
+Initial setup commands for development environments, linting, formatting, monitoring, database schemas, and API design.
+
+- `/setup:setup-development-environment` - Setup complete development environment
+- `/setup:setup-linting` - Setup code linting and quality tools
+- `/setup:setup-formatting` - Configure code formatting tools
+- `/setup:setup-monitoring-observability` - Setup monitoring and observability tools
+- `/setup:setup-monorepo` - Configure monorepo project structure
+- `/setup:migrate-to-typescript` - Migrate JavaScript project to TypeScript
+- `/setup:modernize-deps` - Update and modernize project dependencies
+- `/setup:design-database-schema` - Design optimized database schemas
+- `/setup:create-database-migrations` - Create and manage database migrations
+- `/setup:design-rest-api` - Design RESTful API architecture
+- `/setup:implement-graphql-api` - Implement GraphQL API endpoints
+- `/setup:setup-rate-limiting` - Implement API rate limiting
+
+### 👥 `/team:*` - Team Collaboration
+Team workflow tools including standup reports, sprint planning, retrospectives, workload balancing, and knowledge capture.
+
+- `/team:standup-report` - Generate daily standup reports
+- `/team:sprint-planning` - Plan and organize sprint workflows
+- `/team:retrospective-analyzer` - Analyze team retrospectives for insights
+- `/team:team-workload-balancer` - Balance team workload distribution
+- `/team:issue-triage` - Triage and prioritize issues effectively
+- `/team:estimate-assistant` - Generate accurate project time estimates
+- `/team:session-learning-capture` - Capture and document session learnings
+- `/team:memory-spring-cleaning` - Clean and organize project memory
+- `/team:architecture-review` - Review and improve system architecture
+- `/team:dependency-mapper` - Map and analyze project dependencies
+- `/team:migration-assistant` - Assist with system migration planning
+
+*Development tools `/dev:prime`, `/dev:sentient`, `/dev:all-tools` contributed by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
+
 
 ## How It Works
 
@@ -194,36 +210,36 @@ Performs a specific task in my project.
    - Verify the result
 ```
 
-Use it immediately with: `/project:my-command`
+Use it immediately with: `/namespace:my-command`
 
 ### Using Commands
-Commands are available as `/project:command-name` in Claude Code. Each command follows a structured workflow that Claude executes automatically, ensuring consistent and thorough results across different projects.
+Commands are available as `/namespace:command-name` in Claude Code. Each command follows a structured workflow that Claude executes automatically, ensuring consistent and thorough results across different projects.
 
 **Example workflows:**
-- `/project:code-review` analyzes your entire codebase for quality, security, and performance
+- `/dev:code-review` analyzes your entire codebase for quality, security, and performance
 - `/project:create-feature dashboard` plans, implements, and tests a new dashboard feature
-- `/project:fix-issue 123` systematically resolves GitHub issue #123 with testing
+- `/dev:fix-issue 123` systematically resolves GitHub issue #123 with testing
 
 ## Common Workflows
 
 **New Feature Development:**
 ```bash
-/project:code-review                    # Assess current state
+/dev:code-review                    # Assess current state
 /project:create-feature user-dashboard  # Implement feature
-/project:security-audit                 # Verify security
+/security:security-audit                 # Verify security
 ```
 
 **Bug Fixing:**
 ```bash
-/project:fix-issue 456                  # Fix the specific issue
-/project:code-review                    # Verify fix quality
+/dev:fix-issue 456                  # Fix the specific issue
+/dev:code-review                    # Verify fix quality
 ```
 
 **Code Maintenance:**
 ```bash
-/project:dependency-audit               # Check for outdated dependencies
-/project:performance-audit              # Identify bottlenecks
-/project:refactor-code legacy-module    # Improve problematic areas
+/security:dependency-audit               # Check for outdated dependencies
+/performance:performance-audit              # Identify bottlenecks
+/dev:refactor-code legacy-module    # Improve problematic areas
 ```
 
 ## Need More Details?

@@ -4,6 +4,57 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.0] - 2025-01-12
+
+### ⚠️ BREAKING CHANGES
+- **Major: Namespace Organization** - All commands now organized into logical namespaces
+  - Commands must be accessed using namespace syntax (e.g., `/dev:code-review`, `/test:generate-test-cases`)
+  - **Migration Required**: Update existing command usage from `/project:command` to `/namespace:command`
+  - See [Migration Guide](#migration-from-v1x-to-v20) below for detailed instructions
+
+### Added
+- **🏗️ Namespace Organization System**:
+  - **10 Namespaces Created**: `project/`, `dev/`, `test/`, `security/`, `performance/`, `sync/`, `deploy/`, `docs/`, `setup/`, `team/`
+  - **90+ Commands Reorganized** into logical categories following Claude Code documentation standards
+  - **Enhanced Discoverability**: Commands grouped by function for easier navigation
+  - **Namespace Documentation**: Individual README files for each namespace
+
+- **✨ Enhanced Command Descriptions**:
+  - **All command descriptions updated** to match Claude Code's concise style (4-8 words, action-oriented)
+  - **Improved Command Palette Experience** with clear, scannable descriptions
+  - **Consistent Formatting** across all namespaces using action verbs
+
+- **📚 Documentation Improvements**:
+  - **README.md Complete Rewrite**: Reflects new namespace organization
+  - **Namespace Overview Section**: Clear explanation of each namespace's purpose
+  - **Updated Examples**: All command examples use new namespace syntax
+  - **Main Command Guide**: Comprehensive overview with usage patterns
+
+### Changed
+- **Command Access Pattern**: Commands now use `/namespace:command` syntax instead of `/project:command`
+- **File Organization**: All commands moved from flat structure to namespace directories
+- **Command Discovery**: Enhanced browsability through logical grouping
+
+### Migration from v1.x to v2.0
+
+**Quick Reference:**
+- `/project:code-review` → `/dev:code-review`
+- `/project:generate-test-cases` → `/test:generate-test-cases`
+- `/project:security-audit` → `/security:security-audit`
+- `/project:optimize-build` → `/performance:optimize-build`
+
+**Full Migration Map:**
+- **Development Tools**: `/project:code-review`, `/project:debug-error`, `/project:explain-code` → `/dev:*`
+- **Testing**: `/project:generate-test-cases`, `/project:test-coverage` → `/test:*`
+- **Security**: `/project:security-audit`, `/project:dependency-audit` → `/security:*`
+- **Performance**: `/project:optimize-build`, `/project:performance-audit` → `/performance:*`
+- **Deployment**: `/project:prepare-release`, `/project:containerize-application` → `/deploy:*`
+- **Documentation**: `/project:generate-api-documentation` → `/docs:*`
+- **Setup**: `/project:setup-linting`, `/project:migrate-to-typescript` → `/setup:*`
+- **Team**: `/project:sprint-planning`, `/project:standup-report` → `/team:*`
+
+## [1.6.0] - 2025-01-07
+
 ### Added
 - **DevOps Commands**:
   - `setup-automated-releases` - Implement automated release system with conventional commits and GitHub Actions
@@ -13,10 +64,6 @@ All notable changes to this project will be documented in this file.
   - Contributing guidelines with commit conventions
   - Pull request template
   - Release configuration for GitHub
-
-## [1.6.0] - 2025-01-07
-
-### Added
 - **Utility Commands** (4 new commands contributed by IndyDevDan/DislerH from claude-code-hooks-mastery):
   - `all-tools` - List all available tools in TypeScript function signature format
   - `git-status` - Comprehensive git repository status analysis
