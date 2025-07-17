@@ -90,7 +90,6 @@ Essential development utilities including code review, debugging, refactoring, a
 - [`/dev:fix-issue`](.claude/commands/dev/fix-issue.md) - Identify and resolve code issues
 - [`/dev:ultra-think`](.claude/commands/dev/ultra-think.md) - Deep analysis and problem solving mode
 - [`/dev:prime`](.claude/commands/dev/prime.md) - Enhanced AI mode for complex tasks
-- [`/dev:sentient`](.claude/commands/dev/sentient.md) - AI assistant with advanced problem-solving capabilities
 - [`/dev:all-tools`](.claude/commands/dev/all-tools.md) - Display all available development tools
 - [`/dev:git-status`](.claude/commands/dev/git-status.md) - Show detailed git repository status
 - [`/dev:clean-branches`](.claude/commands/dev/clean-branches.md) - Clean up merged and stale git branches
@@ -220,7 +219,7 @@ Advanced simulation and modeling tools for exponential decision value. Transform
 
 **📖 [Comprehensive Examples Guide](/.claude/commands/simulation/SIMULATION_EXAMPLES.md)** - Real-world usage patterns, argument templates, and command synergy workflows.
 
-*Development tools `/dev:prime`, `/dev:sentient`, `/dev:all-tools` contributed by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
+*Development tools `/dev:prime`, `/dev:all-tools` contributed by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
 
 
 <a id="how-it-works"></a>
