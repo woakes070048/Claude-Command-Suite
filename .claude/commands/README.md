@@ -34,6 +34,9 @@ Initial setup commands for development environments, linting, formatting, monito
 ### 👥 `/team:*` - Team Collaboration
 Team workflow tools including standup reports, sprint planning, retrospectives, workload balancing, and knowledge capture.
 
+### 🎯 `/simulation:*` - AI Reality Simulators
+Advanced simulation and modeling tools for exponential decision value. Transform from linear execution gains to exponential strategic advantage through systematic scenario exploration, digital twins, and timeline compression.
+
 ## Usage
 
 Commands follow the namespace pattern: `/<namespace>:<command>`
@@ -51,6 +54,7 @@ For example:
 3. **Writing tests?** Use `/test:generate-test-cases`
 4. **Security concerns?** Run `/security:security-audit`
 5. **Performance issues?** Check `/performance:performance-audit`
+6. **Major decisions?** Explore `/simulation:business-scenario-explorer`
 
 ## Finding Commands
 

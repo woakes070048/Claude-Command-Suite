@@ -1,7 +1,7 @@
 # Claude Code Custom Slash Commands
 
 ![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)
-![Total Commands](https://img.shields.io/badge/Total%20Commands-90%20and%20growing!-brightgreen?style=for-the-badge)
+![Total Commands](https://img.shields.io/badge/Total%20Commands-104%20and%20growing!-brightgreen?style=for-the-badge)
 ![GitHub Release](https://img.shields.io/github/v/release/qdhenry/Claude-Command-Suite?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)
 <!-- Dynamic badge (will work after PR merge): ![Total Commands](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/qdhenry/Claude-Command-Suite/main/.github/badges/command-count.json&style=for-the-badge) -->
@@ -46,7 +46,7 @@ claude code
 
 ## Available Commands
 
-🚀 **90+ Commands Organized by Namespace** - Discover the right tool for any task with our namespace organization.
+🚀 **104+ Commands Organized by Namespace** - Discover the right tool for any task with our namespace organization.
 
 ## Command Namespaces
 
@@ -59,6 +59,7 @@ Initialize, configure, and manage projects. Includes commands for creating new p
 - `/project:milestone-tracker` - Track and monitor project milestone progress
 - `/project:project-health-check` - Analyze overall project health and metrics
 - `/project:project-to-linear` - Sync project structure to Linear workspace
+- `/project:project-timeline-simulator` - Simulate project outcomes with variable modeling
 
 ### 💻 `/dev:*` - Development Tools
 Essential development utilities including code review, debugging, refactoring, and specialized AI modes for enhanced assistance.
@@ -76,6 +77,8 @@ Essential development utilities including code review, debugging, refactoring, a
 - `/dev:clean-branches` - Clean up merged and stale git branches
 - `/dev:directory-deep-dive` - Analyze directory structure and purpose
 - `/dev:code-to-task` - Convert code analysis to Linear tasks
+- `/dev:code-permutation-tester` - Test multiple code variations through simulation
+- `/dev:architecture-scenario-explorer` - Explore architectural decisions through scenario analysis
 
 ### 🧪 `/test:*` - Testing Suite
 Comprehensive testing tools covering unit tests, integration tests, E2E tests, coverage analysis, mutation testing, and visual regression testing.
@@ -109,6 +112,7 @@ Tools for optimizing build times, bundle sizes, database queries, caching strate
 - `/performance:implement-caching-strategy` - Design and implement caching solutions
 - `/performance:add-performance-monitoring` - Setup application performance monitoring
 - `/performance:setup-cdn-optimization` - Configure CDN for optimal delivery
+- `/performance:system-behavior-simulator` - Simulate system performance under various loads
 
 ### 🔄 `/sync:*` - Integration & Synchronization
 Bidirectional sync between GitHub Issues and Linear, PR tracking, conflict resolution, and cross-platform task management.
@@ -179,6 +183,23 @@ Team workflow tools including standup reports, sprint planning, retrospectives, 
 - `/team:architecture-review` - Review and improve system architecture
 - `/team:dependency-mapper` - Map and analyze project dependencies
 - `/team:migration-assistant` - Assist with system migration planning
+- `/team:decision-quality-analyzer` - Analyze decision quality with scenario testing
+
+### 🎯 `/simulation:*` - AI Reality Simulators
+*Inspired by "AI agents at their most under-leveraged point" by AI News & Strategy Daily | Nate B. Jones*
+
+Advanced simulation and modeling tools for exponential decision value. Transform from linear execution gains to exponential strategic advantage through systematic scenario exploration, digital twins, and timeline compression.
+
+- `/simulation:business-scenario-explorer` - Multi-timeline business exploration with constraint validation
+- `/simulation:digital-twin-creator` - Systematic digital twin creation with data quality checks
+- `/simulation:decision-tree-explorer` - Decision branch analysis with probability weighting
+- `/simulation:market-response-modeler` - Customer/market response simulation with segment analysis
+- `/simulation:timeline-compressor` - Accelerated scenario testing with confidence intervals
+- `/simulation:constraint-modeler` - World constraint modeling with assumption validation
+- `/simulation:future-scenario-generator` - Scenario generation with plausibility scoring
+- `/simulation:simulation-calibrator` - Test and refine simulation accuracy
+
+**📖 [Comprehensive Examples Guide](/.claude/commands/simulation/SIMULATION_EXAMPLES.md)** - Real-world usage patterns, argument templates, and command synergy workflows.
 
 *Development tools `/dev:prime`, `/dev:sentient`, `/dev:all-tools` contributed by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
 
@@ -219,6 +240,7 @@ Commands are available as `/namespace:command-name` in Claude Code. Each command
 - `/dev:code-review` analyzes your entire codebase for quality, security, and performance
 - `/project:create-feature dashboard` plans, implements, and tests a new dashboard feature
 - `/dev:fix-issue 123` systematically resolves GitHub issue #123 with testing
+- `/simulation:business-scenario-explorer Evaluate market expansion into Europe` models multiple business timelines and outcomes
 
 ## Common Workflows
 
@@ -240,6 +262,13 @@ Commands are available as `/namespace:command-name` in Claude Code. Each command
 /security:dependency-audit               # Check for outdated dependencies
 /performance:performance-audit              # Identify bottlenecks
 /dev:refactor-code legacy-module    # Improve problematic areas
+```
+
+**Strategic Decision Making:**
+```bash
+/simulation:constraint-modeler              # Map decision constraints
+/simulation:business-scenario-explorer      # Explore multiple timelines
+/simulation:decision-tree-explorer          # Optimize decision choices
 ```
 
 ## Need More Details?
