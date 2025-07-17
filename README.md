@@ -10,6 +10,15 @@
 
 Custom slash commands for Claude Code that provide structured workflows for common software development tasks. Get comprehensive analysis, feature development, and code maintenance with organized namespace commands like `/dev:code-review`, `/test:generate-test-cases`, and `/deploy:prepare-release`.
 
+## 📚 Table of Contents
+
+| **🚀 Getting Started** | **⚡ Commands** | **💡 Usage** | **🔧 Development** | **📖 Resources** |
+|:---------------------:|:---------------:|:------------:|:------------------:|:----------------:|
+| [Quick Start](#quick-start) | [Available Commands](#available-commands) | [How It Works](#how-it-works) | [Contributing](#contributing) | [Requirements](#requirements) |
+| [Installation Guide](docs/INSTALLATION.md) | [Command Namespaces](#command-namespaces) | [Common Workflows](#common-workflows) | [Release Process](#release-process) | [Need More Details?](#need-more-details) |
+|  |  |  | [Automated Changelog](#automated-changelog) |  |
+
+<a id="quick-start"></a>
 ## Quick Start
 
 ### Option 1: Direct Installation (Recommended)
@@ -44,166 +53,177 @@ claude code
 /security:security-audit   # Check for security issues
 ```
 
+<a id="available-commands"></a>
 ## Available Commands
 
 🚀 **104+ Commands Organized by Namespace** - Discover the right tool for any task with our namespace organization.
 
+### 🎯 Quick Navigation to Command Namespaces
+
+| **Core Development** | **Quality & Testing** | **Deployment** | **Collaboration** | **Advanced** |
+|:--------------------:|:--------------------:|:--------------:|:----------------:|:------------:|
+| [🚀 Project](#-project---project-management) | [🧪 Test](#-test---testing-suite) | [📦 Deploy](#-deploy---deployment--release) | [👥 Team](#-team---team-collaboration) | [🎯 Simulation](#-simulation---ai-reality-simulators) |
+| [💻 Dev](#-dev---development-tools) | [🔒 Security](#-security---security--compliance) | [📚 Docs](#-docs---documentation-generation) | [🔄 Sync](#-sync---integration--synchronization) |  |
+| [🔧 Setup](#-setup---configuration--setup) | [⚡ Performance](#-performance---performance-optimization) |  |  |  |
+
+<a id="command-namespaces"></a>
 ## Command Namespaces
 
 ### 🚀 `/project:*` - Project Management
 Initialize, configure, and manage projects. Includes commands for creating new projects, adding packages, tracking milestones, and monitoring project health.
 
-- `/project:init-project` - Initialize new project with essential structure
-- `/project:add-package` - Add and configure new project dependencies  
-- `/project:create-feature` - Scaffold new feature with boilerplate code
-- `/project:milestone-tracker` - Track and monitor project milestone progress
-- `/project:project-health-check` - Analyze overall project health and metrics
-- `/project:project-to-linear` - Sync project structure to Linear workspace
-- `/project:project-timeline-simulator` - Simulate project outcomes with variable modeling
+- [`/project:init-project`](.claude/commands/project/init-project.md) - Initialize new project with essential structure
+- [`/project:add-package`](.claude/commands/project/add-package.md) - Add and configure new project dependencies  
+- [`/project:create-feature`](.claude/commands/project/create-feature.md) - Scaffold new feature with boilerplate code
+- [`/project:milestone-tracker`](.claude/commands/project/milestone-tracker.md) - Track and monitor project milestone progress
+- [`/project:project-health-check`](.claude/commands/project/project-health-check.md) - Analyze overall project health and metrics
+- [`/project:project-to-linear`](.claude/commands/project/project-to-linear.md) - Sync project structure to Linear workspace
+- [`/project:project-timeline-simulator`](.claude/commands/project/project-timeline-simulator.md) - Simulate project outcomes with variable modeling
 
 ### 💻 `/dev:*` - Development Tools
 Essential development utilities including code review, debugging, refactoring, and specialized AI modes for enhanced assistance.
 
-- `/dev:code-review` - Comprehensive code quality review
-- `/dev:debug-error` - Systematically debug and fix errors
-- `/dev:explain-code` - Analyze and explain code functionality
-- `/dev:refactor-code` - Intelligently refactor and improve code quality
-- `/dev:fix-issue` - Identify and resolve code issues
-- `/dev:ultra-think` - Deep analysis and problem solving mode
-- `/dev:prime` - Enhanced AI mode for complex tasks
-- `/dev:sentient` - AI assistant with advanced problem-solving capabilities
-- `/dev:all-tools` - Display all available development tools
-- `/dev:git-status` - Show detailed git repository status
-- `/dev:clean-branches` - Clean up merged and stale git branches
-- `/dev:directory-deep-dive` - Analyze directory structure and purpose
-- `/dev:code-to-task` - Convert code analysis to Linear tasks
-- `/dev:code-permutation-tester` - Test multiple code variations through simulation
-- `/dev:architecture-scenario-explorer` - Explore architectural decisions through scenario analysis
+- [`/dev:code-review`](.claude/commands/dev/code-review.md) - Comprehensive code quality review
+- [`/dev:debug-error`](.claude/commands/dev/debug-error.md) - Systematically debug and fix errors
+- [`/dev:explain-code`](.claude/commands/dev/explain-code.md) - Analyze and explain code functionality
+- [`/dev:refactor-code`](.claude/commands/dev/refactor-code.md) - Intelligently refactor and improve code quality
+- [`/dev:fix-issue`](.claude/commands/dev/fix-issue.md) - Identify and resolve code issues
+- [`/dev:ultra-think`](.claude/commands/dev/ultra-think.md) - Deep analysis and problem solving mode
+- [`/dev:prime`](.claude/commands/dev/prime.md) - Enhanced AI mode for complex tasks
+- [`/dev:sentient`](.claude/commands/dev/sentient.md) - AI assistant with advanced problem-solving capabilities
+- [`/dev:all-tools`](.claude/commands/dev/all-tools.md) - Display all available development tools
+- [`/dev:git-status`](.claude/commands/dev/git-status.md) - Show detailed git repository status
+- [`/dev:clean-branches`](.claude/commands/dev/clean-branches.md) - Clean up merged and stale git branches
+- [`/dev:directory-deep-dive`](.claude/commands/dev/directory-deep-dive.md) - Analyze directory structure and purpose
+- [`/dev:code-to-task`](.claude/commands/dev/code-to-task.md) - Convert code analysis to Linear tasks
+- [`/dev:code-permutation-tester`](.claude/commands/dev/code-permutation-tester.md) - Test multiple code variations through simulation
+- [`/dev:architecture-scenario-explorer`](.claude/commands/dev/architecture-scenario-explorer.md) - Explore architectural decisions through scenario analysis
 
 ### 🧪 `/test:*` - Testing Suite
 Comprehensive testing tools covering unit tests, integration tests, E2E tests, coverage analysis, mutation testing, and visual regression testing.
 
-- `/test:generate-test-cases` - Generate comprehensive test cases automatically
-- `/test:write-tests` - Write unit and integration tests
-- `/test:test-coverage` - Analyze and report test coverage
-- `/test:setup-comprehensive-testing` - Setup complete testing infrastructure
-- `/test:e2e-setup` - Configure end-to-end testing suite
-- `/test:setup-visual-testing` - Setup visual regression testing
-- `/test:setup-load-testing` - Configure load and performance testing
-- `/test:add-mutation-testing` - Setup mutation testing for code quality
-- `/test:add-property-based-testing` - Implement property-based testing framework
-- `/test:test-changelog-automation` - Automate changelog testing workflow
+- [`/test:generate-test-cases`](.claude/commands/test/generate-test-cases.md) - Generate comprehensive test cases automatically
+- [`/test:write-tests`](.claude/commands/test/write-tests.md) - Write unit and integration tests
+- [`/test:test-coverage`](.claude/commands/test/test-coverage.md) - Analyze and report test coverage
+- [`/test:setup-comprehensive-testing`](.claude/commands/test/setup-comprehensive-testing.md) - Setup complete testing infrastructure
+- [`/test:e2e-setup`](.claude/commands/test/e2e-setup.md) - Configure end-to-end testing suite
+- [`/test:setup-visual-testing`](.claude/commands/test/setup-visual-testing.md) - Setup visual regression testing
+- [`/test:setup-load-testing`](.claude/commands/test/setup-load-testing.md) - Configure load and performance testing
+- [`/test:add-mutation-testing`](.claude/commands/test/add-mutation-testing.md) - Setup mutation testing for code quality
+- [`/test:add-property-based-testing`](.claude/commands/test/add-property-based-testing.md) - Implement property-based testing framework
+- [`/test:test-changelog-automation`](.claude/commands/test/test-changelog-automation.md) - Automate changelog testing workflow
 
 ### 🔒 `/security:*` - Security & Compliance
 Security auditing, dependency scanning, authentication implementation, and security hardening tools to keep your codebase secure.
 
-- `/security:security-audit` - Perform comprehensive security assessment
-- `/security:dependency-audit` - Audit dependencies for security vulnerabilities
-- `/security:security-hardening` - Harden application security configuration
-- `/security:add-authentication-system` - Implement secure user authentication system
+- [`/security:security-audit`](.claude/commands/security/security-audit.md) - Perform comprehensive security assessment
+- [`/security:dependency-audit`](.claude/commands/security/dependency-audit.md) - Audit dependencies for security vulnerabilities
+- [`/security:security-hardening`](.claude/commands/security/security-hardening.md) - Harden application security configuration
+- [`/security:add-authentication-system`](.claude/commands/security/add-authentication-system.md) - Implement secure user authentication system
 
 ### ⚡ `/performance:*` - Performance Optimization
 Tools for optimizing build times, bundle sizes, database queries, caching strategies, and overall application performance.
 
-- `/performance:performance-audit` - Audit application performance metrics
-- `/performance:optimize-build` - Optimize build processes and speed
-- `/performance:optimize-bundle-size` - Reduce and optimize bundle sizes
-- `/performance:optimize-database-performance` - Optimize database queries and performance
-- `/performance:implement-caching-strategy` - Design and implement caching solutions
-- `/performance:add-performance-monitoring` - Setup application performance monitoring
-- `/performance:setup-cdn-optimization` - Configure CDN for optimal delivery
-- `/performance:system-behavior-simulator` - Simulate system performance under various loads
+- [`/performance:performance-audit`](.claude/commands/performance/performance-audit.md) - Audit application performance metrics
+- [`/performance:optimize-build`](.claude/commands/performance/optimize-build.md) - Optimize build processes and speed
+- [`/performance:optimize-bundle-size`](.claude/commands/performance/optimize-bundle-size.md) - Reduce and optimize bundle sizes
+- [`/performance:optimize-database-performance`](.claude/commands/performance/optimize-database-performance.md) - Optimize database queries and performance
+- [`/performance:implement-caching-strategy`](.claude/commands/performance/implement-caching-strategy.md) - Design and implement caching solutions
+- [`/performance:add-performance-monitoring`](.claude/commands/performance/add-performance-monitoring.md) - Setup application performance monitoring
+- [`/performance:setup-cdn-optimization`](.claude/commands/performance/setup-cdn-optimization.md) - Configure CDN for optimal delivery
+- [`/performance:system-behavior-simulator`](.claude/commands/performance/system-behavior-simulator.md) - Simulate system performance under various loads
 
 ### 🔄 `/sync:*` - Integration & Synchronization
 Bidirectional sync between GitHub Issues and Linear, PR tracking, conflict resolution, and cross-platform task management.
 
-- `/sync:sync-issues-to-linear` - Sync GitHub issues to Linear workspace
-- `/sync:sync-linear-to-issues` - Sync Linear tasks to GitHub issues
-- `/sync:bidirectional-sync` - Enable bidirectional GitHub-Linear synchronization
-- `/sync:issue-to-linear-task` - Convert GitHub issues to Linear tasks
-- `/sync:linear-task-to-issue` - Convert Linear tasks to GitHub issues
-- `/sync:sync-pr-to-task` - Link pull requests to Linear tasks
-- `/sync:sync-status` - Monitor GitHub-Linear sync health status
-- `/sync:bulk-import-issues` - Bulk import GitHub issues to Linear
-- `/sync:cross-reference-manager` - Manage cross-platform reference links
-- `/sync:sync-automation-setup` - Setup automated synchronization workflows
-- `/sync:sync-conflict-resolver` - Resolve synchronization conflicts automatically
-- `/sync:task-from-pr` - Create Linear tasks from pull requests
+- [`/sync:sync-issues-to-linear`](.claude/commands/sync/sync-issues-to-linear.md) - Sync GitHub issues to Linear workspace
+- [`/sync:sync-linear-to-issues`](.claude/commands/sync/sync-linear-to-issues.md) - Sync Linear tasks to GitHub issues
+- [`/sync:bidirectional-sync`](.claude/commands/sync/bidirectional-sync.md) - Enable bidirectional GitHub-Linear synchronization
+- [`/sync:issue-to-linear-task`](.claude/commands/sync/issue-to-linear-task.md) - Convert GitHub issues to Linear tasks
+- [`/sync:linear-task-to-issue`](.claude/commands/sync/linear-task-to-issue.md) - Convert Linear tasks to GitHub issues
+- [`/sync:sync-pr-to-task`](.claude/commands/sync/sync-pr-to-task.md) - Link pull requests to Linear tasks
+- [`/sync:sync-status`](.claude/commands/sync/sync-status.md) - Monitor GitHub-Linear sync health status
+- [`/sync:bulk-import-issues`](.claude/commands/sync/bulk-import-issues.md) - Bulk import GitHub issues to Linear
+- [`/sync:cross-reference-manager`](.claude/commands/sync/cross-reference-manager.md) - Manage cross-platform reference links
+- [`/sync:sync-automation-setup`](.claude/commands/sync/sync-automation-setup.md) - Setup automated synchronization workflows
+- [`/sync:sync-conflict-resolver`](.claude/commands/sync/sync-conflict-resolver.md) - Resolve synchronization conflicts automatically
+- [`/sync:task-from-pr`](.claude/commands/sync/task-from-pr.md) - Create Linear tasks from pull requests
 
 ### 📦 `/deploy:*` - Deployment & Release
 Release preparation, automated deployments, rollback capabilities, containerization, and Kubernetes deployment management.
 
-- `/deploy:prepare-release` - Prepare and validate release packages
-- `/deploy:hotfix-deploy` - Deploy critical hotfixes quickly
-- `/deploy:rollback-deploy` - Rollback deployment to previous version
-- `/deploy:setup-automated-releases` - Setup automated release workflows
-- `/deploy:containerize-application` - Containerize application for deployment
-- `/deploy:setup-kubernetes-deployment` - Configure Kubernetes deployment manifests
-- `/deploy:ci-setup` - Setup continuous integration pipeline
-- `/deploy:add-changelog` - Generate and maintain project changelog
-- `/deploy:changelog-demo-command` - Demo changelog automation features
+- [`/deploy:prepare-release`](.claude/commands/deploy/prepare-release.md) - Prepare and validate release packages
+- [`/deploy:hotfix-deploy`](.claude/commands/deploy/hotfix-deploy.md) - Deploy critical hotfixes quickly
+- [`/deploy:rollback-deploy`](.claude/commands/deploy/rollback-deploy.md) - Rollback deployment to previous version
+- [`/deploy:setup-automated-releases`](.claude/commands/deploy/setup-automated-releases.md) - Setup automated release workflows
+- [`/deploy:containerize-application`](.claude/commands/deploy/containerize-application.md) - Containerize application for deployment
+- [`/deploy:setup-kubernetes-deployment`](.claude/commands/deploy/setup-kubernetes-deployment.md) - Configure Kubernetes deployment manifests
+- [`/deploy:ci-setup`](.claude/commands/deploy/ci-setup.md) - Setup continuous integration pipeline
+- [`/deploy:add-changelog`](.claude/commands/deploy/add-changelog.md) - Generate and maintain project changelog
+- [`/deploy:changelog-demo-command`](.claude/commands/deploy/changelog-demo-command.md) - Demo changelog automation features
 
 ### 📚 `/docs:*` - Documentation Generation
 Automated documentation tools for APIs, architecture diagrams, onboarding guides, and troubleshooting documentation.
 
-- `/docs:generate-api-documentation` - Auto-generate API reference documentation
-- `/docs:doc-api` - Generate API documentation from code
-- `/docs:create-architecture-documentation` - Generate comprehensive architecture documentation
-- `/docs:create-onboarding-guide` - Create developer onboarding guide
-- `/docs:migration-guide` - Create migration guides for updates
-- `/docs:troubleshooting-guide` - Generate troubleshooting documentation
+- [`/docs:generate-api-documentation`](.claude/commands/docs/generate-api-documentation.md) - Auto-generate API reference documentation
+- [`/docs:doc-api`](.claude/commands/docs/doc-api.md) - Generate API documentation from code
+- [`/docs:create-architecture-documentation`](.claude/commands/docs/create-architecture-documentation.md) - Generate comprehensive architecture documentation
+- [`/docs:create-onboarding-guide`](.claude/commands/docs/create-onboarding-guide.md) - Create developer onboarding guide
+- [`/docs:migration-guide`](.claude/commands/docs/migration-guide.md) - Create migration guides for updates
+- [`/docs:troubleshooting-guide`](.claude/commands/docs/troubleshooting-guide.md) - Generate troubleshooting documentation
 
 ### 🔧 `/setup:*` - Configuration & Setup
 Initial setup commands for development environments, linting, formatting, monitoring, database schemas, and API design.
 
-- `/setup:setup-development-environment` - Setup complete development environment
-- `/setup:setup-linting` - Setup code linting and quality tools
-- `/setup:setup-formatting` - Configure code formatting tools
-- `/setup:setup-monitoring-observability` - Setup monitoring and observability tools
-- `/setup:setup-monorepo` - Configure monorepo project structure
-- `/setup:migrate-to-typescript` - Migrate JavaScript project to TypeScript
-- `/setup:modernize-deps` - Update and modernize project dependencies
-- `/setup:design-database-schema` - Design optimized database schemas
-- `/setup:create-database-migrations` - Create and manage database migrations
-- `/setup:design-rest-api` - Design RESTful API architecture
-- `/setup:implement-graphql-api` - Implement GraphQL API endpoints
-- `/setup:setup-rate-limiting` - Implement API rate limiting
+- [`/setup:setup-development-environment`](.claude/commands/setup/setup-development-environment.md) - Setup complete development environment
+- [`/setup:setup-linting`](.claude/commands/setup/setup-linting.md) - Setup code linting and quality tools
+- [`/setup:setup-formatting`](.claude/commands/setup/setup-formatting.md) - Configure code formatting tools
+- [`/setup:setup-monitoring-observability`](.claude/commands/setup/setup-monitoring-observability.md) - Setup monitoring and observability tools
+- [`/setup:setup-monorepo`](.claude/commands/setup/setup-monorepo.md) - Configure monorepo project structure
+- [`/setup:migrate-to-typescript`](.claude/commands/setup/migrate-to-typescript.md) - Migrate JavaScript project to TypeScript
+- [`/setup:modernize-deps`](.claude/commands/setup/modernize-deps.md) - Update and modernize project dependencies
+- [`/setup:design-database-schema`](.claude/commands/setup/design-database-schema.md) - Design optimized database schemas
+- [`/setup:create-database-migrations`](.claude/commands/setup/create-database-migrations.md) - Create and manage database migrations
+- [`/setup:design-rest-api`](.claude/commands/setup/design-rest-api.md) - Design RESTful API architecture
+- [`/setup:implement-graphql-api`](.claude/commands/setup/implement-graphql-api.md) - Implement GraphQL API endpoints
+- [`/setup:setup-rate-limiting`](.claude/commands/setup/setup-rate-limiting.md) - Implement API rate limiting
 
 ### 👥 `/team:*` - Team Collaboration
 Team workflow tools including standup reports, sprint planning, retrospectives, workload balancing, and knowledge capture.
 
-- `/team:standup-report` - Generate daily standup reports
-- `/team:sprint-planning` - Plan and organize sprint workflows
-- `/team:retrospective-analyzer` - Analyze team retrospectives for insights
-- `/team:team-workload-balancer` - Balance team workload distribution
-- `/team:issue-triage` - Triage and prioritize issues effectively
-- `/team:estimate-assistant` - Generate accurate project time estimates
-- `/team:session-learning-capture` - Capture and document session learnings
-- `/team:memory-spring-cleaning` - Clean and organize project memory
-- `/team:architecture-review` - Review and improve system architecture
-- `/team:dependency-mapper` - Map and analyze project dependencies
-- `/team:migration-assistant` - Assist with system migration planning
-- `/team:decision-quality-analyzer` - Analyze decision quality with scenario testing
+- [`/team:standup-report`](.claude/commands/team/standup-report.md) - Generate daily standup reports
+- [`/team:sprint-planning`](.claude/commands/team/sprint-planning.md) - Plan and organize sprint workflows
+- [`/team:retrospective-analyzer`](.claude/commands/team/retrospective-analyzer.md) - Analyze team retrospectives for insights
+- [`/team:team-workload-balancer`](.claude/commands/team/team-workload-balancer.md) - Balance team workload distribution
+- [`/team:issue-triage`](.claude/commands/team/issue-triage.md) - Triage and prioritize issues effectively
+- [`/team:estimate-assistant`](.claude/commands/team/estimate-assistant.md) - Generate accurate project time estimates
+- [`/team:session-learning-capture`](.claude/commands/team/session-learning-capture.md) - Capture and document session learnings
+- [`/team:memory-spring-cleaning`](.claude/commands/team/memory-spring-cleaning.md) - Clean and organize project memory
+- [`/team:architecture-review`](.claude/commands/team/architecture-review.md) - Review and improve system architecture
+- [`/team:dependency-mapper`](.claude/commands/team/dependency-mapper.md) - Map and analyze project dependencies
+- [`/team:migration-assistant`](.claude/commands/team/migration-assistant.md) - Assist with system migration planning
+- [`/team:decision-quality-analyzer`](.claude/commands/team/decision-quality-analyzer.md) - Analyze decision quality with scenario testing
 
 ### 🎯 `/simulation:*` - AI Reality Simulators
 *Inspired by "AI agents at their most under-leveraged point" by AI News & Strategy Daily | Nate B. Jones*
 
 Advanced simulation and modeling tools for exponential decision value. Transform from linear execution gains to exponential strategic advantage through systematic scenario exploration, digital twins, and timeline compression.
 
-- `/simulation:business-scenario-explorer` - Multi-timeline business exploration with constraint validation
-- `/simulation:digital-twin-creator` - Systematic digital twin creation with data quality checks
-- `/simulation:decision-tree-explorer` - Decision branch analysis with probability weighting
-- `/simulation:market-response-modeler` - Customer/market response simulation with segment analysis
-- `/simulation:timeline-compressor` - Accelerated scenario testing with confidence intervals
-- `/simulation:constraint-modeler` - World constraint modeling with assumption validation
-- `/simulation:future-scenario-generator` - Scenario generation with plausibility scoring
-- `/simulation:simulation-calibrator` - Test and refine simulation accuracy
+- [`/simulation:business-scenario-explorer`](.claude/commands/simulation/business-scenario-explorer.md) - Multi-timeline business exploration with constraint validation
+- [`/simulation:digital-twin-creator`](.claude/commands/simulation/digital-twin-creator.md) - Systematic digital twin creation with data quality checks
+- [`/simulation:decision-tree-explorer`](.claude/commands/simulation/decision-tree-explorer.md) - Decision branch analysis with probability weighting
+- [`/simulation:market-response-modeler`](.claude/commands/simulation/market-response-modeler.md) - Customer/market response simulation with segment analysis
+- [`/simulation:timeline-compressor`](.claude/commands/simulation/timeline-compressor.md) - Accelerated scenario testing with confidence intervals
+- [`/simulation:constraint-modeler`](.claude/commands/simulation/constraint-modeler.md) - World constraint modeling with assumption validation
+- [`/simulation:future-scenario-generator`](.claude/commands/simulation/future-scenario-generator.md) - Scenario generation with plausibility scoring
+- [`/simulation:simulation-calibrator`](.claude/commands/simulation/simulation-calibrator.md) - Test and refine simulation accuracy
 
 **📖 [Comprehensive Examples Guide](/.claude/commands/simulation/SIMULATION_EXAMPLES.md)** - Real-world usage patterns, argument templates, and command synergy workflows.
 
 *Development tools `/dev:prime`, `/dev:sentient`, `/dev:all-tools` contributed by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
 
 
+<a id="how-it-works"></a>
 ## How It Works
 
 Claude Code automatically recognizes any markdown file in your project's `.claude/commands/` directory as a slash command. No installation or setup required - just add the file and start using it!
@@ -242,6 +262,7 @@ Commands are available as `/namespace:command-name` in Claude Code. Each command
 - `/dev:fix-issue 123` systematically resolves GitHub issue #123 with testing
 - `/simulation:business-scenario-explorer Evaluate market expansion into Europe` models multiple business timelines and outcomes
 
+<a id="common-workflows"></a>
 ## Common Workflows
 
 **New Feature Development:**
@@ -271,12 +292,14 @@ Commands are available as `/namespace:command-name` in Claude Code. Each command
 /simulation:decision-tree-explorer          # Optimize decision choices
 ```
 
+<a id="need-more-details"></a>
 ## Need More Details?
 
 - **[Installation Guide](docs/INSTALLATION.md)** - Detailed installation methods, troubleshooting, and configuration
 - **[Customization Guide](docs/CUSTOMIZATION.md)** - How to modify commands and create new ones
 - **[Development Guide](docs/DEVELOPMENT.md)** - Contributing, testing, and best practices
 
+<a id="contributing"></a>
 ## Contributing
 
 This repository exists to collect and share useful slash commands for Claude Code. **Contributions are welcome!**
@@ -298,6 +321,7 @@ This repository exists to collect and share useful slash commands for Claude Cod
 
 See **[Development Guide](docs/DEVELOPMENT.md)** for detailed contribution guidelines, testing practices, and quality standards.
 
+<a id="automated-changelog"></a>
 ## Automated Changelog
 
 This project features automated changelog generation to track command additions and updates:
@@ -326,6 +350,7 @@ This script will:
 - **Description Extraction**: Pulls descriptions directly from command files
 - **Backup Safety**: Creates backups before making changes
 
+<a id="release-process"></a>
 ## Release Process
 
 This project uses automated releases powered by [Conventional Commits](https://www.conventionalcommits.org/). Every merge to the main branch triggers our release workflow which:
@@ -350,6 +375,7 @@ Releases happen automatically when you:
 
 For details on contributing and commit formats, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
+<a id="requirements"></a>
 ## Requirements
 
 - Claude Code version 1.0 or later
