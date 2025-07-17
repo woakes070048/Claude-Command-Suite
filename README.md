@@ -1,6 +1,6 @@
 # Claude Code Custom Slash Commands
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-3.0.0-blue?style=for-the-badge)
 ![Total Commands](https://img.shields.io/badge/Total%20Commands-104%20and%20growing!-brightgreen?style=for-the-badge)
 ![GitHub Release](https://img.shields.io/github/v/release/qdhenry/Claude-Command-Suite?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)
